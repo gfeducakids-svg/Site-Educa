@@ -1,7 +1,9 @@
 
+'use client';
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Plus, Tag, Gift, ShoppingCart } from "lucide-react";
+import { Gift, ShoppingCart, Tag } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -11,6 +13,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import React from "react";
 
 const includedItems = [
     { name: "Método Chinês de Grafismo Fonético", value: "R$ 99,00" },
@@ -34,6 +38,10 @@ const carouselImages = [
 ];
 
 export function Offer() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  )
+
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
       <div className="container px-4 md:px-6 flex flex-col items-center gap-16">
@@ -89,11 +97,14 @@ export function Offer() {
                 Veja um pouco do material por dentro:
             </h3>
             <Carousel
+              plugins={[plugin.current]}
               opts={{
                 align: "start",
                 loop: true,
               }}
               className="w-full"
+              onMouseEnter={plugin.current.stop}
+              onMouseLeave={plugin.current.reset}
             >
               <CarouselContent>
                 {carouselImages.map((image, index) => (
@@ -104,8 +115,8 @@ export function Offer() {
                           <Image
                             src={image.src}
                             alt={image.alt}
-                            width={500}
-                            height={500}
+                            width={400}
+                            height={400}
                             className="w-full h-full object-contain"
                           />
                         </CardContent>
