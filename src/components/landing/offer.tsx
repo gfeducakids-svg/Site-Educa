@@ -3,7 +3,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Gift, ShoppingCart, Tag } from "lucide-react";
+import { Gift, ShoppingCart, Tag, CheckCircle, Award, Lock } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -39,7 +39,7 @@ const carouselImages = [
 
 export function Offer() {
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
+    Autoplay({ delay: 3000, stopOnInteraction: true })
   )
 
   return (
@@ -72,22 +72,39 @@ export function Offer() {
                         ))}
                     </div>
                 </div>
-                <div className="text-center bg-white p-4 rounded-lg shadow-inner">
-                    <p className="text-sm font-semibold text-muted-foreground">VALOR TOTAL DE TUDO</p>
-                    <p className="text-2xl font-bold text-muted-foreground line-through">R$ 218,00</p>
-                </div>
-                <div className="text-center bg-primary/10 border-2 border-dashed border-primary p-6 rounded-lg shadow-lg space-y-4">
-                    <div>
-                        <p className="text-lg sm:text-xl font-semibold uppercase text-primary">🔥 OFERTA ESPECIAL HOJE:</p>
-                        <p className="text-4xl sm:text-5xl font-bold text-foreground">APENAS R$ 27,90</p>
-                        <p className="text-sm text-muted-foreground">(Pagamento Único)</p>
+                
+                <div className="text-center space-y-4 pt-6">
+                    <p className="text-lg text-muted-foreground">
+                        No total tudo deveria custar <span className="line-through text-red-500">R$ 453,00</span>
+                        <br/>
+                        Mas hoje você vai ter acesso completo por
+                    </p>
+                    <p className="text-6xl font-bold text-green-600">R$ 37</p>
+                    <p className="text-lg font-semibold">5 x de R$ 8,19 *</p>
+
+                    <div className="w-full max-w-xs mx-auto border-t border-b border-gray-300 my-4 py-2">
+                      <p className="text-sm font-semibold tracking-wider text-muted-foreground">ACESSO VITALÍCIO | ACESSO IMEDIATO</p>
                     </div>
-                    <Button asChild size="lg" className="h-auto w-full py-4 px-6 text-lg sm:text-xl font-headline bg-green-500 hover:bg-green-600 text-white shadow-lg transform hover:scale-105 transition-transform duration-300 animate-pulse">
+
+                    <Button asChild size="lg" className="h-auto w-full max-w-md py-4 px-6 text-xl font-bold bg-green-500 hover:bg-green-600 text-white shadow-lg rounded-full transform hover:scale-105 transition-transform duration-300 animate-pulse">
                         <Link href="https://pay.kiwify.com.br/S7SLFJY">
-                            <ShoppingCart className="mr-3 h-6 w-6" />
-                            QUERO GARANTIR MINHA VAGA
+                            QUERO GARANTIR O MEU KIT AGORA!
                         </Link>
                     </Button>
+                    <div className="flex justify-center items-center gap-4 pt-4 text-xs text-muted-foreground">
+                        <div className="flex items-center gap-1">
+                            <CheckCircle className="h-4 w-4 text-primary"/>
+                            <span>Compra Segura</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                            <Award className="h-4 w-4 text-primary"/>
+                            <span>Satisfação Garantida</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                            <Lock className="h-4 w-4 text-primary"/>
+                            <span>Privacidade Protegida</span>
+                        </div>
+                    </div>
                 </div>
             </CardContent>
         </Card>
@@ -108,16 +125,16 @@ export function Offer() {
             >
               <CarouselContent>
                 {carouselImages.map((image, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 p-2">
                     <div className="p-1">
-                      <Card className="overflow-hidden">
-                        <CardContent className="p-0 flex aspect-square items-center justify-center">
+                      <Card className="overflow-hidden rounded-lg">
+                        <CardContent className="p-0 flex aspect-[4/3] items-center justify-center">
                           <Image
                             src={image.src}
                             alt={image.alt}
                             width={400}
-                            height={400}
-                            className="w-full h-full object-contain"
+                            height={300}
+                            className="w-full h-full object-cover"
                           />
                         </CardContent>
                       </Card>
