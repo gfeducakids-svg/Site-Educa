@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'Alfabetiza Kids - Método Chinês para Alfabetização Rápida',
@@ -20,10 +21,43 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet" />
+        <Script
+          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+          data-utmify-prevent-xcod-sck=""
+          data-utmify-prevent-subids=""
+          async
+          defer
+        ></Script>
+        <Script id="utmify-pixel" strategy="afterInteractive">
+          {`
+            window.pixelId = "689f78033fc84332e6dcb24d";
+            var a = document.createElement("script");
+            a.setAttribute("async", "");
+            a.setAttribute("defer", "");
+            a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+            document.head.appendChild(a);
+          `}
+        </Script>
       </head>
       <body className="font-body antialiased bg-background text-foreground overflow-x-hidden">
         {children}
         <Toaster />
+        <Script id="exit-stopper" strategy="afterInteractive">
+          {`
+            window.redirectURL = "https://xn--educacrianas-tdb.site/ofertaimperdivel/";
+
+            function exitStopper() {
+              if (window.redirectURL) {
+                window.location.href = window.redirectURL;
+              }
+            }
+
+            history.pushState(null, null, location.href);
+            window.addEventListener("popstate", function () {
+              exitStopper();
+            });
+          `}
+        </Script>
       </body>
     </html>
   );
