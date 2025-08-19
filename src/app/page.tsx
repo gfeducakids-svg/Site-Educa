@@ -16,7 +16,7 @@ import { SocialProofPopup } from "@/components/landing/social-proof-popup";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-dvh bg-background">
+    <div className="flex flex-col min-h-dvh bg-background w-full overflow-x-hidden">
       <AvailabilityBar />
       <main className="flex-1">
         <Hero />
