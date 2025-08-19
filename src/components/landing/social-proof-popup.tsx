@@ -38,8 +38,8 @@ export function SocialProofPopup() {
   return (
     <div
       aria-live="polite"
-      className={`fixed bottom-5 left-5 z-50 transition-all duration-500 ease-out ${
-        isVisible ? 'translate-x-0 opacity-100' : '-translate-x-[200%] opacity-0'
+      className={`fixed bottom-5 right-5 z-50 transition-all duration-500 ease-out ${
+        isVisible ? 'translate-x-0 opacity-100' : 'translate-x-[200%] opacity-0'
       }`}
     >
       <Card className="shadow-2xl border-2 border-accent bg-white">
