@@ -40,7 +40,7 @@ export function Offer() {
                         <p className="text-base sm:text-lg font-semibold uppercase">🔥 SEU INVESTIMENTO HOJE:</p>
                         <p className="text-4xl sm:text-5xl font-bold">APENAS R$ 27,90</p>
                     </div>
-                    <Button asChild size="lg" className="h-auto py-3 px-6 text-base sm:text-lg font-headline bg-white hover:bg-white/90 text-primary shadow-lg animate-pulse w-full sm:w-auto">
+                    <Button asChild size="lg" className="h-auto py-3 px-6 text-base sm:text-lg font-headline bg-white hover:bg-white/90 text-primary shadow-lg animate-pulse w-full sm:w-auto text-center">
                         <Link href="https://pay.kiwify.com.br/S7SLFJY">
                             QUERO GARANTIR MINHA VAGA
                         </Link>

@@ -11,7 +11,7 @@ export function Hero() {
         <div className="grid gap-8 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_600px] items-center">
           <div className="flex flex-col justify-center space-y-6">
             <div className="space-y-4">
-              <h1 className="text-4xl font-bold font-headline tracking-tighter sm:text-5xl md:text-6xl text-foreground">
+              <h1 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl md:text-6xl text-foreground">
                 DESCUBRA O Método Chinês que Alfabetiza Crianças 3x Mais Rápido <span className="text-primary">(300% MAIS EFICAZ)</span>
               </h1>
               <p className="max-w-[600px] text-muted-foreground md:text-xl font-rubik">
