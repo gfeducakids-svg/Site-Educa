@@ -18,7 +18,6 @@ export function Footer() {
           </Link>
         </div>
         <div className="text-center md:text-right">
-          <p className="font-semibold">Alfabetiza Kids</p>
           <p className="text-sm">Copyright © {year} - TODOS OS DIREITOS RESERVADOS</p>
         </div>
       </div>
