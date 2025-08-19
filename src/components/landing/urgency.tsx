@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AlertTriangle, Clock, Award } from "lucide-react";
 
@@ -8,8 +9,8 @@ export function Urgency() {
         <div className="grid gap-10 lg:grid-cols-2 items-center">
             <div className="space-y-4">
                 <div className="flex items-center gap-4">
-                    <AlertTriangle className="h-10 w-10 text-destructive" />
-                    <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter font-headline text-foreground">
+                    <AlertTriangle className="h-8 w-8 sm:h-10 sm:w-10 text-destructive flex-shrink-0" />
+                    <h2 className="text-xl sm:text-3xl font-bold tracking-tighter font-headline text-foreground">
                         ATENÇÃO: OFERTA POR TEMPO LIMITADO
                     </h2>
                 </div>
