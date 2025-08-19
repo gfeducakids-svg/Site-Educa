@@ -18,8 +18,8 @@ export function Hero() {
                 Para pais e educadores que querem alfabetizar sem lágrimas ou pressão em apenas 30 dias - usado por +1.200 famílias.
               </p>
             </div>
-            <div className="flex flex-col gap-2 sm:flex-row">
-              <Button asChild size="lg" className="h-auto py-3 px-4 text-sm sm:text-base font-headline bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg">
+            <div className="flex flex-col gap-2 min-[400px]:flex-row">
+              <Button asChild size="lg" className="h-auto py-3 px-4 text-xs sm:text-base font-headline bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg">
                 <Link href="https://pay.kiwify.com.br/S7SLFJY">
                   <Rocket className="mr-2 h-5 w-5" />
                   QUERO QUE MEU FILHO LEIA EM 30 DIAS
@@ -32,7 +32,7 @@ export function Hero() {
               alt="Criança sorrindo enquanto aprende a ler com um método divertido"
               className="mx-auto aspect-video overflow-hidden object-cover w-full"
               height="338"
-              src="https://placehold.co/600x338.png"
+              src="https://i.imgur.com/ZA2vjMc.png"
               width="600"
               data-ai-hint="child learning"
               priority

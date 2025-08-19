@@ -7,21 +7,21 @@ const testimonials = [
     name: 'Carla, mãe de Miguel (6 anos)',
     location: 'São Paulo/SP',
     quote: "Eu estava desesperada. Miguel chorava toda vez que via uma cartilha. Em 3 semanas com o método, ele começou a formar palavras sozinho e hoje pede para 'brincar de ler' comigo. Eu recuperei a paz em casa e a autoestima do meu filho.",
-    image: 'https://i.imgur.com/bgsicu3.png',
+    image: 'https://i.imgur.com/TIRyQcf.jpeg',
     dataAiHint: 'mother child'
   },
   {
     name: 'Fernanda, mãe de Laura (5 anos)',
     location: 'Belo Horizonte/MG',
     quote: "Tentei apps, reforço, até psicopedagoga. Nada funcionava. Com o grafismo chinês, Laura aprendeu brincando. Ela mesma disse: 'Mamãe, agora eu sei ler de verdade!' Vale muito mais que os R$ 27,90 que paguei.",
-    image: 'https://i.imgur.com/RInc4LW.png',
+    image: 'https://i.imgur.com/gGqTP3z.png',
     dataAiHint: 'mother daughter'
   },
   {
     name: 'Professor Renato',
     location: 'Escola Municipal de Curitiba/PR',
     quote: "Em 15 anos de magistério, nunca vi método tão eficaz. Meus alunos pedem para fazer as atividades de grafismo. A alfabetização virou diversão na minha sala. Recomendo para todos os colegas.",
-    image: 'https://i.imgur.com/dUfpSp5.png',
+    image: 'https://i.imgur.com/ihcjYdf.png',
     dataAiHint: 'male teacher'
   },
 ];
