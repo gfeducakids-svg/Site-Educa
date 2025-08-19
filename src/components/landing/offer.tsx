@@ -3,6 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Plus, Tag, Gift, ShoppingCart } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const includedItems = [
     { name: "Método Chinês de Grafismo Fonético", value: "R$ 99,00" },
@@ -16,10 +24,19 @@ const newBonusItems = [
     { name: "Atividade Bingo de Sílabas (Novo!)", value: "Incalculável" },
 ]
 
+const carouselImages = [
+  { src: "https://i.imgur.com/tYI2vas.png", alt: "Atividade de alfabetização 1" },
+  { src: "https://i.imgur.com/Rgadoag.png", alt: "Atividade de alfabetização 2" },
+  { src: "https://i.imgur.com/RegFOYm.png", alt: "Atividade de alfabetização 3" },
+  { src: "https://i.imgur.com/XErMvzx.png", alt: "Atividade de alfabetização 4" },
+  { src: "https://i.imgur.com/purmdGb.png", alt: "Atividade de alfabetização 5" },
+  { src: "https://i.imgur.com/40pdFGH.png", alt: "Atividade de alfabetização 6" },
+];
+
 export function Offer() {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
-      <div className="container px-4 md:px-6 flex justify-center">
+      <div className="container px-4 md:px-6 flex flex-col items-center gap-16">
         <Card className="w-full max-w-2xl bg-background shadow-2xl border-2 border-primary transform hover:scale-105 transition-transform duration-500">
             <CardHeader className="text-center">
                 <CardTitle className="text-2xl sm:text-3xl font-bold font-headline text-foreground animate-pulse">O que você recebe ao se inscrever hoje</CardTitle>
@@ -66,6 +83,41 @@ export function Offer() {
                 </div>
             </CardContent>
         </Card>
+
+        <div className="w-full max-w-4xl">
+            <h3 className="text-2xl md:text-3xl font-bold font-headline text-center text-foreground mb-8">
+                Veja um pouco do material por dentro:
+            </h3>
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent>
+                {carouselImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <Card className="overflow-hidden">
+                        <CardContent className="p-0 flex aspect-square items-center justify-center">
+                          <Image
+                            src={image.src}
+                            alt={image.alt}
+                            width={500}
+                            height={500}
+                            className="w-full h-full object-contain"
+                          />
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden sm:flex" />
+              <CarouselNext className="hidden sm:flex" />
+            </Carousel>
+        </div>
       </div>
     </section>
   );
