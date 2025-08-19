@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const testimonials = [
   {
-    name: 'Carla e Matheus, mãe de Miguel (6 anos)',
+    name: 'Carla, mãe de Miguel (6 anos)',
     location: 'São Paulo/SP',
     quote: "Eu estava desesperada. Miguel chorava toda vez que via uma cartilha. Em 3 semanas com o método, ele começou a formar palavras sozinho e hoje pede para 'brincar de ler' comigo. Eu recuperei a paz em casa e a autoestima do meu filho.",
     image: 'https://i.imgur.com/bgsicu3.png',
