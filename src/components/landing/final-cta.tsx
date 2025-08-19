@@ -15,7 +15,7 @@ export function FinalCta() {
     <section className="w-full py-12 md:py-24 lg:py-32 bg-background">
       <div className="container flex flex-col items-center gap-8 px-4 md:px-6">
         <div className="text-center space-y-4">
-            <h2 className="text-3xl md:text-5xl font-bold font-headline text-foreground">Sua última chance de transformar a educação do seu filho.</h2>
+            <h2 className="text-3xl md:text-4xl font-bold font-headline text-foreground">Sua última chance de transformar a educação do seu filho.</h2>
             <p className="text-muted-foreground md:text-xl font-rubik">Não espere mais. Dê ao seu filho o futuro que ele merece.</p>
         </div>
         <Button asChild size="lg" className="h-auto py-4 px-8 text-lg md:text-xl font-headline bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg animate-pulse text-center">
