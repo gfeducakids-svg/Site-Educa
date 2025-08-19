@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
-        <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_600px] items-center">
+        <div className="grid gap-8 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_600px] items-center">
           <div className="flex flex-col justify-center space-y-6">
             <div className="space-y-4">
               <h1 className="text-4xl font-bold font-headline tracking-tighter sm:text-5xl md:text-6xl text-foreground">
@@ -30,9 +30,9 @@ export function Hero() {
           <Card className="overflow-hidden rounded-xl shadow-2xl">
             <Image
               alt="Criança sorrindo enquanto aprende a ler com um método divertido"
-              className="mx-auto aspect-square overflow-hidden object-cover w-full"
+              className="mx-auto aspect-video overflow-hidden object-cover w-full"
               height="600"
-              src="https://i.imgur.com/19LCEGv.png"
+              src="https://placehold.co/600x450.png"
               width="600"
               data-ai-hint="child learning"
               priority

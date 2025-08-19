@@ -1,5 +1,7 @@
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Plus, Tag } from "lucide-react";
+import Link from "next/link";
 
 const includedItems = [
     { name: "Método Chinês de Grafismo Fonético", value: "R$ 99,00" },
@@ -32,9 +34,16 @@ export function Offer() {
                     <p className="text-sm font-semibold text-muted-foreground">VALOR TOTAL</p>
                     <p className="text-2xl font-bold text-muted-foreground line-through">R$ 181,00</p>
                 </div>
-                <div className="text-center bg-primary text-primary-foreground p-6 rounded-lg shadow-lg">
-                    <p className="text-lg font-semibold uppercase">🔥 SEU INVESTIMENTO HOJE:</p>
-                    <p className="text-5xl font-bold">APENAS R$ 27,90</p>
+                <div className="text-center bg-primary text-primary-foreground p-6 rounded-lg shadow-lg space-y-4">
+                    <div>
+                        <p className="text-lg font-semibold uppercase">🔥 SEU INVESTIMENTO HOJE:</p>
+                        <p className="text-5xl font-bold">APENAS R$ 27,90</p>
+                    </div>
+                    <Button asChild size="lg" className="h-auto py-3 px-6 text-lg font-headline bg-white hover:bg-white/90 text-primary shadow-lg animate-pulse">
+                        <Link href="https://pay.kiwify.com.br/S7SLFJY">
+                            QUERO GARANTIR MINHA VAGA
+                        </Link>
+                    </Button>
                 </div>
             </CardContent>
         </Card>

@@ -6,7 +6,7 @@ export function SocialProof() {
       <div className="container px-4 md:px-6">
         <div className="mx-auto max-w-4xl text-center space-y-6">
           <div className="inline-block rounded-lg bg-accent/20 px-4 py-2 text-base font-medium text-primary font-headline">
-            PROVA SOCIAL CIENTÍFICA
+            Como Métodos Visuais-Fonéticos Podem Multiplicar o Aprendizado?
           </div>
           <div className="flex items-start justify-center gap-6 p-8 bg-background rounded-lg shadow-lg border">
             <Lightbulb className="h-10 w-10 text-primary mt-1 flex-shrink-0" />

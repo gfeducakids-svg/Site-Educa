@@ -29,7 +29,7 @@ export function AvailabilityBar() {
     <div className="bg-white text-primary p-2 text-center font-bold font-headline sticky top-0 z-50 shadow-md w-full">
       <div className="container mx-auto flex items-center justify-center gap-2 sm:gap-4">
         <Hourglass className="text-primary h-5 w-5 sm:h-6 sm:w-6" />
-        <span className="text-sm sm:text-base">🔥 RESTAM APENAS: {vacancies} VAGAS</span>
+        <span className="text-sm sm:text-base"> RESTAM APENAS: {vacancies} VAGAS</span>
         <div className="w-1/3 max-w-[200px]">
           <Progress value={100 - progressValue} className="h-3 sm:h-4 bg-accent/30 border border-primary" />
         </div>

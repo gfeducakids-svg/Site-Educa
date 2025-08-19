@@ -6,17 +6,20 @@ import Link from 'next/link';
 const steps = [
   {
     icon: BookHeart,
-    title: "PASSO 1: CONECTAR (5 minutos)",
+    title: "PASSO 1: CONECTAR",
+    subtitle: "(5 Minutos)",
     description: "A criança associa cada letra a um desenho divertido que ela já conhece. O \"A\" vira uma casinha, o \"B\" vira um patinho. Sem decoreba, só diversão."
   },
   {
     icon: PencilRuler,
-    title: "PASSO 2: PRATICAR (10 minutos)",
+    title: "PASSO 2: PRATICAR",
+    subtitle: "(10 Minutos)",
     description: "Com movimentos naturais, ela desenha as letras seguindo o formato que já memorizou. É como brincar de desenhar, mas aprendendo a escrever."
   },
   {
     icon: Search,
-    title: "PASSO 3: DESCOBRIR (15 minutos)",
+    title: "PASSO 3: DESCOBRIR",
+    subtitle: "(15 Minutos)",
     description: "Juntando as letrinhas que já conhece, ela forma suas primeiras palavras. Sem pressão, no ritmo dela, com você do lado comemorando cada conquista."
   }
 ];
@@ -49,7 +52,10 @@ export function Solution() {
                         <div className="bg-primary text-primary-foreground p-3 rounded-full">
                             <step.icon className="h-6 w-6" />
                         </div>
-                        <CardTitle className="font-headline text-primary">{step.title}</CardTitle>
+                        <div>
+                          <CardTitle className="font-headline text-primary text-lg">{step.title}</CardTitle>
+                          <p className="text-sm font-medium text-muted-foreground">{step.subtitle}</p>
+                        </div>
                     </div>
                 </CardHeader>
                 <CardContent>
