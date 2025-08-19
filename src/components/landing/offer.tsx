@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Plus, Tag, Gift } from "lucide-react";
+import { Plus, Tag, Gift, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 
 const includedItems = [
@@ -51,13 +51,15 @@ export function Offer() {
                     <p className="text-sm font-semibold text-muted-foreground">VALOR TOTAL DE TUDO</p>
                     <p className="text-2xl font-bold text-muted-foreground line-through">R$ 218,00</p>
                 </div>
-                <div className="text-center bg-primary text-primary-foreground p-6 rounded-lg shadow-lg space-y-4">
+                <div className="text-center bg-primary/10 border-2 border-dashed border-primary p-6 rounded-lg shadow-lg space-y-4">
                     <div>
-                        <p className="text-base sm:text-lg font-semibold uppercase">🔥 SEU INVESTIMENTO HOJE:</p>
-                        <p className="text-4xl sm:text-5xl font-bold">APENAS R$ 27,90</p>
+                        <p className="text-lg sm:text-xl font-semibold uppercase text-primary">🔥 OFERTA ESPECIAL HOJE:</p>
+                        <p className="text-4xl sm:text-5xl font-bold text-foreground">APENAS R$ 27,90</p>
+                        <p className="text-sm text-muted-foreground">(Pagamento Único)</p>
                     </div>
-                    <Button asChild size="lg" className="h-auto py-3 px-6 text-base sm:text-lg font-headline bg-white hover:bg-white/90 text-primary shadow-lg animate-pulse w-full sm:w-auto text-center">
+                    <Button asChild size="lg" className="h-auto w-full py-4 px-6 text-lg sm:text-xl font-headline bg-green-500 hover:bg-green-600 text-white shadow-lg transform hover:scale-105 transition-transform duration-300 animate-pulse">
                         <Link href="https://pay.kiwify.com.br/S7SLFJY">
+                            <ShoppingCart className="mr-3 h-6 w-6" />
                             QUERO GARANTIR MINHA VAGA
                         </Link>
                     </Button>
