@@ -66,7 +66,7 @@ export function Offer() {
                                 <div className="flex items-center gap-3">
                                     <Gift className="h-5 w-5 text-primary flex-shrink-0 animate-bounce" />
                                     <span className="font-semibold text-primary text-sm sm:text-base">{item.name}</span>
-                                </div>
+                                 </div>
                                 <span className="font-bold text-primary text-sm sm:text-base">{item.value}</span>
                             </div>
                         ))}
@@ -75,13 +75,12 @@ export function Offer() {
                 
                 <div className="text-center space-y-4 pt-6">
                     <p className="text-lg text-muted-foreground">
-                        No total tudo deveria custar <span className="line-through text-red-500">R$ 453,00</span>
+                        No total tudo deveria custar <span className="line-through text-red-500">R$ 218,00</span>
                         <br/>
                         Mas hoje você vai ter acesso completo por
                     </p>
-                    <p className="text-6xl font-bold text-green-600">R$ 37</p>
-                    <p className="text-lg font-semibold">5 x de R$ 8,19 *</p>
-
+                    <p className="text-6xl font-bold text-green-600">R$ 27,90</p>
+                    
                     <div className="w-full max-w-xs mx-auto border-t border-b border-gray-300 my-4 py-2">
                       <p className="text-sm font-semibold tracking-wider text-muted-foreground">ACESSO VITALÍCIO | ACESSO IMEDIATO</p>
                     </div>
