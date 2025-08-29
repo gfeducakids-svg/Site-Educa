@@ -32,7 +32,7 @@ export function AvailabilityBar() {
         <Hourglass className="h-4 w-4 sm:h-6 sm:w-6 flex-shrink-0" />
         <span className="text-xs sm:text-base truncate"> RESTAM APENAS: {vacancies} VAGAS</span>
         <div className="w-1/3 max-w-[200px] flex-shrink-0">
-          <Progress value={100 - progressValue} className="h-3 sm:h-4 bg-white" indicatorClassName="bg-primary" />
+          <Progress value={100 - progressValue} className="h-3 sm:h-4 bg-white border border-black" indicatorClassName="bg-destructive" />
         </div>
       </div>
     </div>
