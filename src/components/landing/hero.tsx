@@ -19,7 +19,7 @@ export function Hero() {
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Button asChild size="lg" className="h-auto py-3 px-4 text-xs sm:text-base font-headline bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg">
+              <Button asChild size="lg" className="h-auto py-3 px-4 text-xs sm:text-base font-headline bg-green-500 hover:bg-green-600 text-primary-foreground shadow-lg">
                 <Link href="https://pay.kiwify.com.br/S7SLFJY">
                   <Rocket className="mr-2 h-5 w-5" />
                   QUERO QUE MEU FILHO LEIA EM 30 DIAS
