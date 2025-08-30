@@ -22,6 +22,8 @@ export default function Home() {
       <div className="star-3"></div>
       <div className="star-4"></div>
       <div className="star-5"></div>
+      <div className="bg-aderecos::before"></div>
+      <div className="bg-aderecos::after"></div>
       <AvailabilityBar />
       <main className="flex-1 relative z-10">
         <Hero />
