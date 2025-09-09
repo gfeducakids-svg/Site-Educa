@@ -45,13 +45,13 @@ export default function Home() {
             </div>
         </section>
 
+        <Urgency />
         <Testimonials />
         <Problem />
         <Solution />
         <Benefits />
         <Comparison />
         <Offer />
-        <Urgency />
         <GuaranteeAndFaq />
         <FinalCta />
       </main>
