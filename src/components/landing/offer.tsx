@@ -85,7 +85,7 @@ export function Offer() {
                       <p className="text-sm font-semibold tracking-wider text-muted-foreground">ACESSO VITALÍCIO | ACESSO IMEDIATO</p>
                     </div>
 
-                    <Button asChild size="lg" className="h-auto w-full max-w-md py-4 px-6 text-xl font-bold bg-green-500 hover:bg-green-600 text-white shadow-lg rounded-full transform hover:scale-105 transition-transform duration-300 animate-pulse">
+                    <Button asChild size="lg" className="h-auto w-full max-w-md py-4 px-4 text-base sm:text-xl font-bold bg-green-500 hover:bg-green-600 text-white shadow-lg rounded-full transform hover:scale-105 transition-transform duration-300 animate-pulse">
                         <Link href="https://pay.kiwify.com.br/S7SLFJY">
                             QUERO GARANTIR O MEU KIT AGORA!
                         </Link>

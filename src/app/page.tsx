@@ -31,11 +31,11 @@ export default function Home() {
       <main className="flex-1 relative z-10">
         <Hero />
 
-        <section id="vsl-section-2" className="pb-8 bg-background">
+        <section id="vsl-section-2" className="pb-8 pt-0 bg-background">
             <div className="container mx-auto px-4">
                 <VslPlayer />
                 <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center mt-8">
-                  <Button asChild size="lg" className="h-auto py-3 px-4 text-xs sm:text-base font-headline bg-green-500 hover:bg-green-600 text-primary-foreground shadow-lg">
+                  <Button asChild size="lg" className="h-auto py-3 px-4 text-[10px] min-[370px]:text-xs sm:text-base font-headline bg-green-500 hover:bg-green-600 text-primary-foreground shadow-lg text-center">
                     <Link href="https://pay.kiwify.com.br/S7SLFJY">
                       <Rocket className="mr-2 h-5 w-5" />
                       QUERO QUE MEU FILHO LEIA EM 30 DIAS

@@ -18,7 +18,7 @@ export function FinalCta() {
             <h2 className="text-3xl md:text-4xl font-bold font-headline text-foreground">Sua última chance de transformar a educação do seu filho.</h2>
             <p className="text-muted-foreground md:text-xl font-rubik">Não espere mais. Dê ao seu filho o futuro que ele merece.</p>
         </div>
-        <Button asChild size="lg" className="h-auto py-4 px-8 text-lg md:text-xl font-headline bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg animate-pulse text-center">
+        <Button asChild size="lg" className="h-auto py-4 px-6 text-base md:text-xl font-headline bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg animate-pulse text-center">
           <Link href="https://pay.kiwify.com.br/S7SLFJY">
             GARANTIR ALFABETIZAÇÃO DO MEU FILHO AGORA
           </Link>
