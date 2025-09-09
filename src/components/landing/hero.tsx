@@ -15,7 +15,7 @@ export function Hero() {
                 DESCUBRA Qual o APP Chinês que alfabetiza crianças com apenas 15 minutos por dia! <span className="text-primary">(3x mais rápido)</span>
               </h1>
               <p className="max-w-[600px] text-muted-foreground md:text-xl font-rubik mx-auto">
-                Para pais que querem alfabetizar sem lágrimas ou pressão em apenas 30 dias. Não espere mais. Dê ao seu filho o futuro que ele merece.
+                Para pais que querem alfabetizar sem lágrimas ou pressão em apenas 30 dias. Não adie mais. Dê ao seu filho o Futuro que ele merece.
               </p>
             </div>
           </div>
