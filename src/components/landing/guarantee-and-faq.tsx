@@ -11,7 +11,7 @@ const faqs = [
   {
     icon: Wallet,
     question: "MUITO CARO",
-    answer: "R$ 27,90 é menos que uma pizza. Uma aula particular custa R$ 50/hora. Você economiza centenas e ainda tem garantia total."
+    answer: "R$ 37,90 é menos que uma pizza. Uma aula particular custa R$ 50/hora. Você economiza centenas e ainda tem garantia total."
   },
   {
     icon: Users,
@@ -61,7 +61,7 @@ export function GuaranteeAndFaq() {
                     <p className="text-muted-foreground md:text-lg">
                         <strong>Email:</strong> gf.educakids@gmail.com
                         <br />
-                        <strong>Área de Membros:</strong> Suporte Imediato 24/7
+                        <strong>Área de Membros:</strong> Suporte Imediato
                     </p>
                 </CardContent>
             </Card>
