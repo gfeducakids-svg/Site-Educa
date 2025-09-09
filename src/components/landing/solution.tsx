@@ -25,13 +25,6 @@ const steps = [
   }
 ];
 
-const highlights = [
-  { icon: Clock, text: "APENAS 15 MINUTOS POR DIA" },
-  { icon: Smile, text: "SEM CARTILHAS CHATAS" },
-  { icon: Sparkles, text: "SEM LÁGRIMAS OU PRESSÃO" },
-  { icon: ArrowRight, text: "RESULTADOS EM 30 DIAS" }
-]
-
 export function Solution() {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-background">
@@ -63,14 +56,6 @@ export function Solution() {
                   <p className="text-muted-foreground">{step.description}</p>
                 </CardContent>
               </Card>
-            ))}
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-4xl pt-8">
-            {highlights.map((highlight, index) => (
-              <div key={index} className="flex items-center justify-center gap-2 p-3 bg-white rounded-lg shadow-md">
-                <highlight.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
-                <span className="font-semibold text-xs sm:text-sm text-foreground text-center">{highlight.text}</span>
-              </div>
             ))}
           </div>
           <div className="pt-6">

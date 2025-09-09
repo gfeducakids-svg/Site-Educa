@@ -1,4 +1,4 @@
-import { CheckCircle2, BotMessageSquare, Home, Clock, Smile, Wallet, Palette } from "lucide-react";
+import { CheckCircle2, BotMessageSquare, Home, Clock, Smile, Wallet, Palette, Sparkles, ArrowRight } from "lucide-react";
 
 const benefits = [
   { icon: Clock, title: "SEU FILHO VAI APRENDER A LER 3X MAIS RÁPIDO", description: "Em apenas 30 dias, você verá resultados que outros métodos levam meses para alcançar." },
@@ -9,6 +9,13 @@ const benefits = [
   { icon: Wallet, title: "PARE DE GASTAR COM REFORÇOS QUE NÃO FUNCIONAM", description: "Um investimento único de R$ 27,90 substitui meses de aulas particulares caras." },
   { icon: Palette, title: "APRENDIZADO NATURAL E DIVERTIDO", description: "Usa a capacidade que a criança já tem: associar desenhos a significados." },
 ];
+
+const highlights = [
+  { icon: Clock, text: "APENAS 15 MINUTOS POR DIA" },
+  { icon: Smile, text: "SEM CARTILHAS CHATAS" },
+  { icon: Sparkles, text: "SEM LÁGRIMAS OU PRESSÃO" },
+  { icon: ArrowRight, text: "RESULTADOS EM 30 DIAS" }
+]
 
 export function Benefits() {
   return (
@@ -28,6 +35,14 @@ export function Benefits() {
                   <h3 className="text-lg font-bold font-headline text-foreground">{benefit.title}</h3>
                   <p className="text-muted-foreground">{benefit.description}</p>
                 </div>
+              </div>
+            ))}
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-4xl pt-8">
+            {highlights.map((highlight, index) => (
+              <div key={index} className="flex items-center justify-center gap-2 p-3 bg-background rounded-lg shadow-md">
+                <highlight.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
+                <span className="font-semibold text-xs sm:text-sm text-foreground text-center">{highlight.text}</span>
               </div>
             ))}
           </div>
