@@ -7,7 +7,14 @@ import { UserCheck } from 'lucide-react';
 const names = [
   "Camila Duarte", "Isabela Nunes", "Tatiane Rocha", "Lorena Martins", 
   "Renata Albuquerque", "Jéssica Lima", "Bianca Ferreira", "Lucas Santana",
-  "Rafael Costa", "Henrique Oliveira"
+  "Rafael Costa", "Henrique Oliveira","Ana Paula Silva", "Maria Clara Oliveira", "João Pedro Santos", "Carlos Almeida",
+"Pedro Henrique Souza", "Lucas Gabriel ", "Carlos Eduardo Rocha", "Paulo Roberto Martins",
+"Luiz Fernando Ribeiro", "Gabriel Augusto Lopes", "Mariana Ferreira da Silva", "Juliana Cristina Gomes",
+"Fernanda Alves ", "Camila Rodrigues Barros", "Patrícia Nogueira Mendes", "Adriana Aparecida Carvalho",
+"André  Monteiro", "Rafael Vieira Lima", "Bruno César Teixeira", "Felipe Moreira Fonseca",
+"Gustavo Henrique ", "Leonardo Faria Campos", "Beatriz Moura Batista", "Carolina Dias Correia",
+"Larissa Azevedo Torres", "Vitória Ramos Cunha", "Sofia Andrade Peixoto", "Daniel Borges Freitas",
+"Eduardo Santana Meireles", "Roberta Cardoso Maciel"
 ];
 
 export function SocialProofPopup() {
