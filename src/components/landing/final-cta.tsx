@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { CreditCard, ShieldCheck } from "lucide-react";
+import { CreditCard, ShieldCheck, Lock, EyeOff, Verified } from "lucide-react";
 
 const PixIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,9 +27,23 @@ export function FinalCta() {
                         <span className="font-medium">Cartão de Crédito</span>
                     </div>
                 </div>
-                <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-                    <ShieldCheck className="h-4 w-4 text-primary" />
-                    <span>Pagamento 100% seguro.</span>
+                <div className="space-y-2 text-sm text-muted-foreground mt-4">
+                    <div className="flex items-center justify-center gap-2">
+                        <ShieldCheck className="h-4 w-4 text-primary" />
+                        <span>Pagamento 100% seguro.</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                        <Lock className="h-4 w-4 text-primary" />
+                        <span>Dados criptografados.</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                        <EyeOff className="h-4 w-4 text-primary" />
+                        <span>Privacidade garantida.</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                        <Verified className="h-4 w-4 text-primary" />
+                        <span>Compra segura via Kiwify.</span>
+                    </div>
                 </div>
             </CardContent>
         </Card>
