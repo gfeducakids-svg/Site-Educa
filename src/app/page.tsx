@@ -13,6 +13,7 @@ import { GuaranteeAndFaq } from "@/components/landing/guarantee-and-faq";
 import { FinalCta } from "@/components/landing/final-cta";
 import { Footer } from "@/components/landing/footer";
 import { SocialProofPopup } from "@/components/landing/social-proof-popup";
+import { VslPlayer } from "@/components/vsl-player";
 
 export default function Home() {
   return (
@@ -27,6 +28,25 @@ export default function Home() {
       <AvailabilityBar />
       <main className="flex-1 relative z-10">
         <Hero />
+
+        <section id="vsl-section-2" className="py-12 md:py-16 bg-background">
+            <div className="container mx-auto px-4">
+                <h1
+                    id="vsl-headline"
+                    className="text-3xl md:text-4xl font-bold font-headline text-center mb-4 text-foreground"
+                    data-ab-variation-a="DESCUBRA O Método Chinês que Alfabetiza Crianças 3x Mais Rápido"
+                    data-ab-variation-b="O ÚNICO Método Capaz de Alfabetizar Crianças em Apenas 30 Dias"
+                ></h1>
+                <p
+                    id="vsl-subheadline"
+                    className="text-lg md:text-xl text-center text-muted-foreground font-rubik max-w-3xl mx-auto mb-8"
+                    data-ab-variation-a="Para pais e educadores que querem alfabetizar sem lágrimas ou pressão."
+                    data-ab-variation-b="Junte-se a mais de 1.200 famílias que transformaram a leitura em alegria."
+                ></p>
+                <VslPlayer />
+            </div>
+        </section>
+
         <SocialProof />
         <Testimonials />
         <Problem />
