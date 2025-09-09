@@ -56,7 +56,7 @@ export function SocialProofPopup() {
           </div>
           <div>
             <p className="font-bold text-sm text-foreground">{currentName}</p>
-            <p className="text-xs text-muted-foreground">Garantiu a sua vaga.</p>
+            <p className="text-xs text-muted-foreground">Garantiu sua vaga.</p>
           </div>
         </CardContent>
       </Card>
