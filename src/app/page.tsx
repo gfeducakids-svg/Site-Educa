@@ -47,7 +47,6 @@ export default function Home() {
             </div>
         </section>
 
-        <SocialProof />
         <Testimonials />
         <Problem />
         <Solution />
@@ -57,6 +56,7 @@ export default function Home() {
         <Offer />
         <Urgency />
         <GuaranteeAndFaq />
+        <SocialProof />
         <FinalCta />
       </main>
       <Footer />
