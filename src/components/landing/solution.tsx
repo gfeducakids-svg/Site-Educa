@@ -32,7 +32,7 @@ export function Solution() {
         <div className="flex flex-col items-center justify-center space-y-12 text-center">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-foreground">
-              COMO FUNCIONA O MÉTODO CHINÊS DE GRAFISMO FONÉTICO
+              COMO FUNCIONA?
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed font-rubik">
               É mais simples do que você imagina:
