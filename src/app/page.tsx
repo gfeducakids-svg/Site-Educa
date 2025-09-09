@@ -44,9 +44,9 @@ export default function Home() {
             </div>
         </section>
 
-        <Urgency />
         <Problem />
         <Benefits />
+        <Urgency />
         <Solution />
         <Testimonials />
         <Comparison />
