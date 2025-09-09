@@ -72,7 +72,7 @@ export function GuaranteeAndFaq() {
         </div>
 
         <div className="space-y-4">
-            <h3 className="text-2xl font-bold font-headline text-foreground">RESPOSTA ÀS OBJEÇÕES COMUNS</h3>
+            <h3 className="text-2xl font-bold font-headline text-foreground">Suas objeções respondidas!</h3>
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`} className="bg-white px-4 rounded-lg shadow mb-2">
