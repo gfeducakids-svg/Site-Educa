@@ -1,3 +1,4 @@
+
 import { AvailabilityBar } from "@/components/landing/availability-bar";
 import { Hero } from "@/components/landing/hero";
 import { SocialProof } from "@/components/landing/social-proof";
@@ -34,18 +35,6 @@ export default function Home() {
 
         <section id="vsl-section-2" className="py-12 md:py-16 bg-background">
             <div className="container mx-auto px-4">
-                <h1
-                    id="vsl-headline"
-                    className="text-3xl md:text-4xl font-bold font-headline text-center mb-4 text-foreground"
-                    data-ab-variation-a="DESCUBRA O Método Chinês que Alfabetiza Crianças 3x Mais Rápido"
-                    data-ab-variation-b="O ÚNICO Método Capaz de Alfabetizar Crianças em Apenas 30 Dias"
-                ></h1>
-                <p
-                    id="vsl-subheadline"
-                    className="text-lg md:text-xl text-center text-muted-foreground font-rubik max-w-3xl mx-auto mb-8"
-                    data-ab-variation-a="Para pais e educadores que querem alfabetizar sem lágrimas ou pressão."
-                    data-ab-variation-b="Junte-se a mais de 1.200 famílias que transformaram a leitura em alegria."
-                ></p>
                 <VslPlayer />
                 <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center mt-8">
                   <Button asChild size="lg" className="h-auto py-3 px-4 text-xs sm:text-base font-headline bg-green-500 hover:bg-green-600 text-primary-foreground shadow-lg">
