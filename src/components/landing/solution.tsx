@@ -58,12 +58,14 @@ export function Solution() {
               </Card>
             ))}
           </div>
-          <div className="pt-6">
-            <Button asChild size="lg" className="h-auto py-3 px-4 text-sm sm:text-base font-headline bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg">
-              <Link href="https://pay.kiwify.com.br/S7SLFJY">
-                QUERO APRENDER ESSE MÉTODO AGORA
-              </Link>
-            </Button>
+          <div className="pt-6 w-full flex justify-center">
+            <div className="w-full max-w-xs">
+                <Button asChild size="lg" className="h-auto py-3 px-4 w-full text-sm sm:text-base font-headline bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg">
+                  <Link href="https://pay.kiwify.com.br/S7SLFJY">
+                    QUERO APRENDER ESSE MÉTODO AGORA
+                  </Link>
+                </Button>
+            </div>
           </div>
         </div>
       </div>
