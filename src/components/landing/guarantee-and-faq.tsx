@@ -55,7 +55,7 @@ export function GuaranteeAndFaq() {
             <Card className="bg-white shadow-lg">
                 <CardHeader className="text-center">
                     <Mail className="h-12 w-12 mx-auto text-primary" />
-                    <CardTitle className="font-headline text-2xl text-foreground">CANAIS DE SUPORTE</CardTitle>
+                    <CardTitle className="font-headline text-2xl text-foreground">Canais de Atendimento</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
                     <p className="text-muted-foreground md:text-lg">
