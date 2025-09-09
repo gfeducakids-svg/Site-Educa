@@ -290,13 +290,13 @@ export function VslPlayer() {
       )}>
         {/* Play/Pause Button in Center */}
         <div className="absolute inset-0 flex items-center justify-center">
-            <Button variant="ghost" size="icon" onClick={togglePlay} className="w-20 h-20 text-white opacity-0 group-hover/player:opacity-100 transition-opacity rounded-full bg-white/10 hover:bg-white/20">
-                {isPlaying ? <Pause className="w-10 h-10" /> : <Play className="w-10 h-10" />}
+            <Button variant="ghost" size="icon" onClick={togglePlay} className="w-16 h-16 sm:w-20 sm:h-20 text-white opacity-0 group-hover/player:opacity-100 transition-opacity rounded-full bg-white/10 hover:bg-white/20">
+                {isPlaying ? <Pause className="w-8 h-8 sm:w-10 sm:h-10" /> : <Play className="w-8 h-8 sm:w-10 sm:h-10" />}
             </Button>
         </div>
 
         {/* Controls Bar */}
-        <div className="absolute bottom-0 left-0 right-0 p-4 space-y-2">
+        <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-4 space-y-2">
             {/* Progress Bar */}
             <div className={cn("relative w-full h-2.5", videoRef.current && videoRef.current.currentTime > CONFIG.ALLOW_SEEK_AFTER && "cursor-pointer")} onClick={handleSeek}>
                 <div className="absolute w-full h-1 bg-white/30 top-1/2 -translate-y-1/2 rounded-full" />
@@ -314,13 +314,13 @@ export function VslPlayer() {
           
             {/* Bottom Controls */}
             <div className="flex items-center justify-between text-white">
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-1 sm:gap-2">
                     <Button variant="ghost" size="icon" onClick={togglePlay} className="text-white hover:bg-white/10" aria-label={isPlaying ? "Pausar" : "Reproduzir"}>
-                        {isPlaying ? <Pause /> : <Play />}
+                        {isPlaying ? <Pause className="w-5 h-5 sm:w-6 sm:h-6" /> : <Play className="w-5 h-5 sm:w-6 sm:h-6" />}
                     </Button>
-                    <div className="flex items-center gap-2 group/volume">
+                    <div className="flex items-center gap-1 group/volume">
                         <Button variant="ghost" size="icon" onClick={toggleMute} className="text-white hover:bg-white/10" aria-label={isMuted ? "Ativar som" : "Desativar som"}>
-                            {isMuted || volume === 0 ? <VolumeX /> : <Volume2 />}
+                            {isMuted || volume === 0 ? <VolumeX className="w-5 h-5 sm:w-6 sm:h-6"/> : <Volume2 className="w-5 h-5 sm:w-6 sm:h-6" />}
                         </Button>
                         <input
                             type="range"
@@ -329,20 +329,20 @@ export function VslPlayer() {
                             step="0.05"
                             value={volume}
                             onChange={handleVolumeChange}
-                            className="w-20 h-1 accent-white opacity-0 group-hover/volume:opacity-100 transition-opacity"
+                            className="w-16 sm:w-20 h-1 accent-white opacity-0 group-hover/volume:opacity-100 transition-opacity"
                         />
                     </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                    <span className="font-mono text-sm">{formatTime(videoRef.current?.currentTime || 0)} / {formatTime(duration)}</span>
+                <div className="flex items-center gap-1 sm:gap-2">
+                    <span className="font-mono text-xs sm:text-sm">{formatTime(videoRef.current?.currentTime || 0)} / {formatTime(duration)}</span>
                     {isClient && document.pictureInPictureEnabled && (
                         <Button variant="ghost" size="icon" onClick={togglePiP} className="text-white hover:bg-white/10" aria-label="Picture-in-Picture">
-                            <PictureInPicture />
+                            <PictureInPicture className="w-5 h-5 sm:w-6 sm:h-6" />
                         </Button>
                     )}
                     <Button variant="ghost" size="icon" onClick={toggleFullscreen} className="text-white hover:bg-white/10" aria-label="Tela cheia">
-                       {isFullscreen ? <Minimize/> : <Maximize />}
+                       {isFullscreen ? <Minimize className="w-5 h-5 sm:w-6 sm:h-6"/> : <Maximize className="w-5 h-5 sm:w-6 sm:h-6" />}
                     </Button>
                 </div>
             </div>
