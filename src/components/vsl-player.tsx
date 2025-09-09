@@ -351,9 +351,7 @@ export function VslPlayer() {
 
       {isCtaVisible && !isEndScreenVisible && (
         <div className="vsl-cta-container absolute bottom-24 left-1/2 -translate-x-1/2 w-11/12 max-w-lg z-20 animate-fade-in-up">
-            <Button asChild size="lg" className="w-full h-14 text-xl font-bold bg-green-500 hover:bg-green-600 text-white shadow-lg animate-pulse">
-                <a href={CONFIG.CTA_HREF} target="_blank" rel="noopener noreferrer">{CONFIG.CTA_LABEL}</a>
-            </Button>
+            
         </div>
       )}
 
