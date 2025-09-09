@@ -6,7 +6,7 @@ import { Rocket } from 'lucide-react';
 
 export function Hero() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32">
+    <section className="w-full pt-5 pb-5">
       <div className="container px-4 md:px-6">
         <div className="grid gap-8 items-center justify-center">
           <div className="flex flex-col justify-center space-y-6 text-center">
