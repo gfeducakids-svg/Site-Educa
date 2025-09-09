@@ -18,7 +18,7 @@ export function Footer() {
           </Link>
         </div>
         <div className="text-center md:text-right">
-          <p className="text-sm">Copyright © {year} - TODOS OS DIREITOS RESERVADOS</p>
+          <p className="text-sm">Copyright © {year} - Educa Kids</p>
         </div>
       </div>
     </footer>
