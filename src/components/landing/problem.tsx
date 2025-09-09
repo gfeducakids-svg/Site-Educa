@@ -2,7 +2,7 @@ import { HeartHandshake, Lightbulb } from "lucide-react";
 
 export function Problem() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+    <section className="w-full py-8 md:py-12 lg:py-16 bg-white">
       <div className="container px-4 md:px-6">
         <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="space-y-6">

@@ -3,7 +3,7 @@ import { XCircle, CheckCircle } from "lucide-react";
 
 export function Comparison() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-background">
+    <section className="w-full py-8 md:py-12 lg:py-16 bg-background">
       <div className="container px-4 md:px-6">
         <div className="grid gap-10 md:grid-cols-2 md:gap-16">
           <Card className="bg-white shadow-lg border-2 border-destructive/50">

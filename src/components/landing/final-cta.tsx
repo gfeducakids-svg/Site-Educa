@@ -10,7 +10,7 @@ const PixIcon = () => (
 
 export function FinalCta() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-background">
+    <section className="w-full py-8 md:py-12 lg:py-16 bg-background">
       <div className="container flex flex-col items-center gap-8 px-4 md:px-6">
         <Card className="w-full max-w-md bg-white shadow-lg">
             <CardContent className="p-6 space-y-4">

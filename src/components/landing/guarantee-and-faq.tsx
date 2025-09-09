@@ -37,7 +37,7 @@ const faqs = [
 
 export function GuaranteeAndFaq() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+    <section className="w-full py-8 md:py-12 lg:py-16 bg-white">
       <div className="container px-4 md:px-6 grid md:grid-cols-2 gap-12 items-start">
         <div className="space-y-8">
             <Card className="bg-background border-primary border-2 shadow-lg">
