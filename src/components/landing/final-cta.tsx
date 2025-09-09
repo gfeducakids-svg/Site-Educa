@@ -1,7 +1,5 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CreditCard, ShieldCheck } from "lucide-react";
-import Link from "next/link";
 
 const PixIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -14,15 +12,6 @@ export function FinalCta() {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-background">
       <div className="container flex flex-col items-center gap-8 px-4 md:px-6">
-        <div className="text-center space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold font-headline text-foreground">Sua última chance de transformar a educação do seu filho.</h2>
-            <p className="text-muted-foreground md:text-xl font-rubik">Não espere mais. Dê ao seu filho o futuro que ele merece.</p>
-        </div>
-        <Button asChild size="lg" className="h-auto py-4 px-6 text-base md:text-xl font-headline bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg animate-pulse text-center">
-          <Link href="https://pay.kiwify.com.br/S7SLFJY">
-            GARANTIR ALFABETIZAÇÃO DO MEU FILHO AGORA
-          </Link>
-        </Button>
         <Card className="w-full max-w-md bg-white shadow-lg">
             <CardContent className="p-6 space-y-4">
                 <div className="text-center">
