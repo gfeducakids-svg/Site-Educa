@@ -24,7 +24,7 @@ export function Benefits() {
         <div className="flex flex-col items-center justify-center space-y-8 text-center">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline text-foreground">
-              O QUE VOCÊ VAI CONSEGUIR COM O MÉTODO CHINÊS
+              Oque você vai conseguir:
             </h2>
           </div>
           <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
