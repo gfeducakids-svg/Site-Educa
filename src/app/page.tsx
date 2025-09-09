@@ -46,10 +46,10 @@ export default function Home() {
         </section>
 
         <Urgency />
-        <Testimonials />
         <Problem />
         <Solution />
         <Benefits />
+        <Testimonials />
         <Comparison />
         <Offer />
         <GuaranteeAndFaq />
