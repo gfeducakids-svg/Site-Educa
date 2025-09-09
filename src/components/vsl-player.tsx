@@ -42,11 +42,11 @@ export function VslPlayer() {
   const [isCtaVisible, setIsCtaVisible] = useState(false);
   const [isEndScreenVisible, setIsEndScreenVisible] = useState(false);
   const [isControlsVisible, setIsControlsVisible] = useState(true);
-  const [isExitIntentModalVisible, setIsExitIntentModalVisible] = useState(false);
   const controlsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   
   // A/B Test Logic
   useEffect(() => {
+    if (typeof window === 'undefined') return;
     const bucket = localStorage.getItem('ab_bucket') || (Math.random() < 0.5 ? 'a' : 'b');
     localStorage.setItem('ab_bucket', bucket);
     
@@ -66,6 +66,7 @@ export function VslPlayer() {
 
   // Player Setup Effect
   useEffect(() => {
+    if (typeof window === 'undefined') return;
     const video = videoRef.current;
     if (!video) return;
 
@@ -164,19 +165,6 @@ export function VslPlayer() {
     };
   }, [isCtaVisible]);
   
-  // Exit-Intent Modal Effect
-  useEffect(() => {
-    const handleMouseOut = (e: MouseEvent) => {
-        if (e.clientY < 10 && !sessionStorage.getItem('exitIntentShown')) {
-            setIsExitIntentModalVisible(true);
-            sessionStorage.setItem('exitIntentShown', 'true');
-            window.dataLayer.push({ event: 'exit_intent_shown' });
-        }
-    };
-    document.addEventListener('mouseout', handleMouseOut);
-    return () => document.removeEventListener('mouseout', handleMouseOut);
-  }, []);
-
   // Hide Controls Effect
   useEffect(() => {
     const container = playerContainerRef.current;
@@ -274,18 +262,6 @@ export function VslPlayer() {
   };
 
   const posterUrl = `${CONFIG.IK_BASE}/${CONFIG.POSTER_PATH}?tr=f-auto,q-85`;
-  
-  const handleEmailSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const emailInput = e.currentTarget.elements.namedItem('email') as HTMLInputElement;
-    const email = emailInput.value;
-    if (email) {
-      window.dataLayer.push({ event: 'lead_submit', email });
-      setIsExitIntentModalVisible(false);
-      // Aqui você pode adicionar lógica para enviar o e-mail para seu serviço
-      alert(`Obrigado! Fique de olho na sua caixa de entrada, ${email}.`);
-    }
-  };
 
   return (
     <div 
@@ -350,13 +326,13 @@ export function VslPlayer() {
 
                 <div className="flex items-center gap-4">
                     <span className="font-mono text-sm">{formatTime(videoRef.current?.currentTime || 0)} / {formatTime(duration)}</span>
-                    {document.pictureInPictureEnabled && (
+                    {typeof document !== 'undefined' && document.pictureInPictureEnabled && (
                         <Button variant="ghost" size="icon" onClick={togglePiP} className="text-white hover:bg-white/10" aria-label="Picture-in-Picture">
                             <PictureInPicture />
                         </Button>
                     )}
                     <Button variant="ghost" size="icon" onClick={toggleFullscreen} className="text-white hover:bg-white/10" aria-label="Tela cheia">
-                       {document.fullscreenElement ? <Minimize/> : <Maximize />}
+                       {typeof document !== 'undefined' && document.fullscreenElement ? <Minimize/> : <Maximize />}
                     </Button>
                 </div>
             </div>
@@ -385,21 +361,6 @@ export function VslPlayer() {
               </Button>
           </div>
       )}
-      
-      {isExitIntentModalVisible && (
-        <div className="vsl-exit-intent-modal fixed inset-0 bg-black/70 z-50 flex items-center justify-center animate-fade-in" onClick={() => setIsExitIntentModalVisible(false)}>
-            <div className="bg-background rounded-lg shadow-2xl p-8 max-w-md w-11/12 text-center relative" onClick={e => e.stopPropagation()}>
-                 <Button variant="ghost" size="icon" onClick={() => setIsExitIntentModalVisible(false)} className="absolute top-2 right-2 text-muted-foreground">X</Button>
-                 <h3 className="text-2xl font-bold font-headline mb-4 text-primary">Espere, não vá ainda!</h3>
-                 <p className="text-muted-foreground mb-6">Deixe seu e-mail para receber uma <strong className="text-foreground">oferta especial</strong> e dicas de alfabetização direto na sua caixa de entrada.</p>
-                 <form onSubmit={handleEmailSubmit} className="flex flex-col gap-4">
-                     <Input name="email" type="email" placeholder="seu-melhor-email@exemplo.com" required className="h-12 text-center" />
-                     <Button type="submit" size="lg" className="w-full h-12 text-lg bg-primary hover:bg-primary/90">Quero minha oferta!</Button>
-                 </form>
-            </div>
-        </div>
-      )}
-
     </div>
   );
 }
