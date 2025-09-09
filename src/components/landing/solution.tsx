@@ -1,7 +1,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Clock, Smile, Sparkles, BookHeart, PencilRuler, Search } from 'lucide-react';
+import { BookHeart, PencilRuler, Search } from 'lucide-react';
 import Link from 'next/link';
 
 const steps = [
