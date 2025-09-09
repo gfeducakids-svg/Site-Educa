@@ -29,7 +29,7 @@ export function FinalCta() {
                 </div>
                 <div className="text-center bg-accent/20 text-primary p-3 rounded-lg">
                     <p className="font-semibold">PARCELAMENTO SEM JUROS:</p>
-                    <p className="text-lg font-bold">12x de R$ 2,50 no cartão</p>
+                    <p className="text-lg font-bold">12x de R$ 3,15 no cartão</p>
                     <p className="text-sm text-muted-foreground">(Menos que um lanche no shopping)</p>
                 </div>
                 <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">

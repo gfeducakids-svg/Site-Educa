@@ -5,7 +5,7 @@ import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'Alfabetiza Kids - Método Chinês para Alfabetização Rápida',
-  description: 'Descubra o Método Chinês que alfabetiza crianças 300% mais rápido, sem lágrimas ou pressão. +1.200 famílias aprovam. Garantia 7 dias. Apenas R$ 27,90.',
+  description: 'Descubra o Método Chinês que alfabetiza crianças 300% mais rápido, sem lágrimas ou pressão. +1.200 famílias aprovam. Garantia 7 dias. Apenas R$ 37,90.',
 };
 
 export default function RootLayout({
