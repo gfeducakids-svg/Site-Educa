@@ -6,7 +6,6 @@ import { Problem } from "@/components/landing/problem";
 import { Solution } from "@/components/landing/solution";
 import { Benefits } from "@/components/landing/benefits";
 import { Comparison } from "@/components/landing/comparison";
-import { Offer } from "@/components/landing/offer";
 import { Urgency } from "@/components/landing/urgency";
 import { GuaranteeAndFaq } from "@/components/landing/guarantee-and-faq";
 import { FinalCta } from "@/components/landing/final-cta";
@@ -51,7 +50,6 @@ export default function Home() {
         <Solution />
         <Testimonials />
         <Comparison />
-        <Offer />
         <GuaranteeAndFaq />
         <FinalCta />
       </main>
