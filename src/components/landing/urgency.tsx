@@ -1,35 +1,20 @@
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { AlertTriangle, Clock, Award } from "lucide-react";
+import { AlertTriangle } from "lucide-react";
 
 export function Urgency() {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-background">
       <div className="container px-4 md:px-6">
-        <div className="grid gap-10 lg:grid-cols-2 items-center">
-            <div className="space-y-4">
-                <div className="flex items-center gap-4">
-                    <AlertTriangle className="h-10 w-10 sm:h-12 sm:w-12 text-destructive flex-shrink-0" />
-                    <h2 className="text-lg sm:text-3xl font-bold tracking-tighter font-headline text-foreground">
-                        ATENÇÃO: OFERTA POR TEMPO LIMITADO
-                    </h2>
-                </div>
+        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="flex items-center gap-3 sm:gap-4">
+                <AlertTriangle className="h-8 w-8 sm:h-12 sm:w-12 text-destructive flex-shrink-0" />
+                <h2 className="text-xl sm:text-3xl font-bold tracking-tighter font-headline text-foreground">
+                    ATENÇÃO: OFERTA POR TEMPO LIMITADO
+                </h2>
             </div>
-            <Card className="bg-white shadow-lg border-2 border-primary">
-                <CardHeader>
-                    <CardTitle className="font-headline text-primary flex items-center gap-3">
-                        <Award className="h-7 w-7" />
-                        <span>PRIORIDADE DE ACESSO</span>
-                    </CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <p className="text-xl font-bold text-foreground">PRIMEIROS 50 COMPRADORES GANHAM:</p>
-                    <ul className="list-disc list-inside mt-2 space-y-1 text-muted-foreground">
-                        <li>Acesso imediato (sem espera)</li>
-                        <li>Resposta garantida em até 2 horas no suporte</li>
-                    </ul>
-                </CardContent>
-            </Card>
+            <p className="max-w-[600px] text-muted-foreground md:text-lg">
+                Após as 150 vagas se esgotarem, o preço retornará ao valor original de <span className="font-bold text-destructive">R$ 89,90</span>. Garanta sua vaga pelo preço promocional agora!
+            </p>
         </div>
       </div>
     </section>
