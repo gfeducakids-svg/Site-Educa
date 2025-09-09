@@ -61,7 +61,7 @@ export function GuaranteeAndFaq() {
                     <p className="text-muted-foreground md:text-lg">
                         <strong>Email:</strong> gf.educakids@gmail.com
                         <br />
-                        <strong>Área de Membros:</strong> Suporte Automático 24 Horas!
+                        <strong>Área de Membros:</strong> Suporte Imediato 24/7 !
                     </p>
                 </CardContent>
             </Card>
