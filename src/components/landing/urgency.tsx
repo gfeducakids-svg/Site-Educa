@@ -14,9 +14,6 @@ export function Urgency() {
                         ATENÇÃO: OFERTA POR TEMPO LIMITADO
                     </h2>
                 </div>
-                <p className="text-muted-foreground md:text-lg">
-                    ⚡ <strong>APENAS 150 VAGAS DISPONÍVEIS NESTE MÊS.</strong> Por que limitamos as vagas? Para garantir suporte de qualidade no grupo VIP do Telegram, conseguimos atender apenas 150 famílias por mês. Quando esgotar, só volta no próximo mês com preço normal de R$ 99,00.
-                </p>
             </div>
             <Card className="bg-white shadow-lg border-2 border-primary">
                 <CardHeader>
