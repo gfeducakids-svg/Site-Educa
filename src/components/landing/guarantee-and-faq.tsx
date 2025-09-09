@@ -63,10 +63,6 @@ export function GuaranteeAndFaq() {
                         <br />
                         Resposta garantida em até 24 horas.
                     </p>
-                    <div className="mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground">
-                        <ShieldCheck className="h-4 w-4 text-primary" />
-                        <span>Pagamento protegido</span>
-                    </div>
                 </CardContent>
             </Card>
         </div>
