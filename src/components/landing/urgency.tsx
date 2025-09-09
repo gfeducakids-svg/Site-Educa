@@ -10,7 +10,7 @@ export function Urgency() {
             <div className="space-y-4">
                 <div className="flex items-center gap-4">
                     <AlertTriangle className="h-10 w-10 sm:h-12 sm:w-12 text-destructive flex-shrink-0" />
-                    <h2 className="text-xl sm:text-3xl font-bold tracking-tighter font-headline text-foreground">
+                    <h2 className="text-lg sm:text-3xl font-bold tracking-tighter font-headline text-foreground">
                         ATENÇÃO: OFERTA POR TEMPO LIMITADO
                     </h2>
                 </div>
