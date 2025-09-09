@@ -29,20 +29,20 @@ export function FinalCta() {
                 </div>
                 <div className="space-y-2 text-sm text-muted-foreground mt-4">
                     <div className="flex items-center justify-center gap-2">
-                        <ShieldCheck className="h-4 w-4 text-primary" />
-                        <span>Pagamento 100% seguro.</span>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                        <Lock className="h-4 w-4 text-primary" />
-                        <span>Dados criptografados.</span>
+                        <Verified className="h-4 w-4 text-primary" />
+                        <span>Compra segura via Kiwify.</span>
                     </div>
                     <div className="flex items-center justify-center gap-2">
                         <EyeOff className="h-4 w-4 text-primary" />
                         <span>Privacidade garantida.</span>
                     </div>
                     <div className="flex items-center justify-center gap-2">
-                        <Verified className="h-4 w-4 text-primary" />
-                        <span>Compra segura via Kiwify.</span>
+                        <Lock className="h-4 w-4 text-primary" />
+                        <span>Dados criptografados.</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                        <ShieldCheck className="h-4 w-4 text-primary" />
+                        <span>Pagamento 100% seguro.</span>
                     </div>
                 </div>
             </CardContent>
