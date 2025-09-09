@@ -27,11 +27,6 @@ export function FinalCta() {
                         <span className="font-medium">Cartão de Crédito</span>
                     </div>
                 </div>
-                <div className="text-center bg-accent/20 text-primary p-3 rounded-lg">
-                    <p className="font-semibold">PARCELAMENTO SEM JUROS:</p>
-                    <p className="text-lg font-bold">12x de R$ 3,15 no cartão</p>
-                    <p className="text-sm text-muted-foreground">(Menos que um lanche no shopping)</p>
-                </div>
                 <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
                     <ShieldCheck className="h-4 w-4 text-primary" />
                     <span>Pagamento 100% seguro.</span>
