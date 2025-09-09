@@ -56,7 +56,7 @@ export function SocialProofPopup() {
           </div>
           <div>
             <p className="font-bold text-sm text-foreground">{currentName}</p>
-            <p className="text-xs text-muted-foreground">acabou de se inscrever.</p>
+            <p className="text-xs text-muted-foreground">adquiriu sua vaga.</p>
           </div>
         </CardContent>
       </Card>
