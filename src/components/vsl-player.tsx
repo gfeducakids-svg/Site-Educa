@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
@@ -5,7 +6,6 @@ import Hls from 'hls.js';
 import { Play, Pause, Volume2, VolumeX, Maximize, Minimize, PictureInPicture } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 
 // Declaração do dataLayer para o GTM
 declare global {
@@ -43,10 +43,13 @@ export function VslPlayer() {
   const [isEndScreenVisible, setIsEndScreenVisible] = useState(false);
   const [isControlsVisible, setIsControlsVisible] = useState(true);
   const controlsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const [isFullscreen, setIsFullscreen] = useState(false);
   
-  // A/B Test Logic
+  // A/B Test and Player Setup Effect
   useEffect(() => {
     if (typeof window === 'undefined') return;
+
+    // A/B Test Logic
     const bucket = localStorage.getItem('ab_bucket') || (Math.random() < 0.5 ? 'a' : 'b');
     localStorage.setItem('ab_bucket', bucket);
     
@@ -62,11 +65,8 @@ export function VslPlayer() {
     if (subheadlineEl) {
         subheadlineEl.innerText = subheadlineEl.getAttribute(`data-ab-variation-${bucket}`) || '';
     }
-  }, []);
 
-  // Player Setup Effect
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
+    // Player Setup
     const video = videoRef.current;
     if (!video) return;
 
@@ -99,7 +99,6 @@ export function VslPlayer() {
       
       setProgress((current / dur) * 100);
       
-      // Barra de progresso psicológica
       let psychProgress;
       const psychologicalPoint = dur * 0.7;
       if (current < psychologicalPoint) {
@@ -128,7 +127,6 @@ export function VslPlayer() {
     video.addEventListener('durationchange', handleDurationChange);
     video.addEventListener('ended', handleEnded);
 
-    // Assistido Autoplay
     const attemptAutoplay = async () => {
         try {
             await video.play();
@@ -145,7 +143,6 @@ export function VslPlayer() {
     };
     attemptAutoplay();
     
-    // Função global para ser chamada por interação externa
     window.playerAutoplay = () => {
       if(video) {
         video.muted = false;
@@ -154,6 +151,13 @@ export function VslPlayer() {
       }
     };
 
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+
+
     // Cleanup
     return () => {
       video.removeEventListener('play', handlePlay);
@@ -161,6 +165,7 @@ export function VslPlayer() {
       video.removeEventListener('timeupdate', handleTimeUpdate);
       video.removeEventListener('durationchange', handleDurationChange);
       video.removeEventListener('ended', handleEnded);
+      document.removeEventListener('fullscreenchange', handleFullscreenChange);
       hlsRef.current?.destroy();
     };
   }, [isCtaVisible]);
@@ -223,7 +228,7 @@ export function VslPlayer() {
   
   const handleSeek = (e: React.MouseEvent<HTMLDivElement>) => {
     const video = videoRef.current;
-    if (!video || video.currentTime < CONFIG.ALLOW_SEEK_AFTER) return;
+    if (!video || (video.currentTime < CONFIG.ALLOW_SEEK_AFTER)) return;
 
     const bar = e.currentTarget;
     const rect = bar.getBoundingClientRect();
@@ -261,6 +266,11 @@ export function VslPlayer() {
     }
   };
 
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const posterUrl = `${CONFIG.IK_BASE}/${CONFIG.POSTER_PATH}?tr=f-auto,q-85`;
 
   return (
@@ -288,7 +298,7 @@ export function VslPlayer() {
         {/* Controls Bar */}
         <div className="absolute bottom-0 left-0 right-0 p-4 space-y-2">
             {/* Progress Bar */}
-            <div className="relative w-full h-2.5 cursor-pointer" onClick={handleSeek}>
+            <div className={cn("relative w-full h-2.5", videoRef.current && videoRef.current.currentTime > CONFIG.ALLOW_SEEK_AFTER && "cursor-pointer")} onClick={handleSeek}>
                 <div className="absolute w-full h-1 bg-white/30 top-1/2 -translate-y-1/2 rounded-full" />
                 {/* Real progress bar */}
                 <div 
@@ -326,13 +336,13 @@ export function VslPlayer() {
 
                 <div className="flex items-center gap-4">
                     <span className="font-mono text-sm">{formatTime(videoRef.current?.currentTime || 0)} / {formatTime(duration)}</span>
-                    {typeof document !== 'undefined' && document.pictureInPictureEnabled && (
+                    {isClient && document.pictureInPictureEnabled && (
                         <Button variant="ghost" size="icon" onClick={togglePiP} className="text-white hover:bg-white/10" aria-label="Picture-in-Picture">
                             <PictureInPicture />
                         </Button>
                     )}
                     <Button variant="ghost" size="icon" onClick={toggleFullscreen} className="text-white hover:bg-white/10" aria-label="Tela cheia">
-                       {typeof document !== 'undefined' && document.fullscreenElement ? <Minimize/> : <Maximize />}
+                       {isFullscreen ? <Minimize/> : <Maximize />}
                     </Button>
                 </div>
             </div>
