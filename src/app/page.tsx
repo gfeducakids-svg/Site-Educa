@@ -14,6 +14,9 @@ import { FinalCta } from "@/components/landing/final-cta";
 import { Footer } from "@/components/landing/footer";
 import { SocialProofPopup } from "@/components/landing/social-proof-popup";
 import { VslPlayer } from "@/components/vsl-player";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { Rocket } from "lucide-react";
 
 export default function Home() {
   return (
@@ -44,6 +47,14 @@ export default function Home() {
                     data-ab-variation-b="Junte-se a mais de 1.200 famílias que transformaram a leitura em alegria."
                 ></p>
                 <VslPlayer />
+                <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center mt-8">
+                  <Button asChild size="lg" className="h-auto py-3 px-4 text-xs sm:text-base font-headline bg-green-500 hover:bg-green-600 text-primary-foreground shadow-lg">
+                    <Link href="https://pay.kiwify.com.br/S7SLFJY">
+                      <Rocket className="mr-2 h-5 w-5" />
+                      QUERO QUE MEU FILHO LEIA EM 30 DIAS
+                    </Link>
+                  </Button>
+                </div>
             </div>
         </section>
 
