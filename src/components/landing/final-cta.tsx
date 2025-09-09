@@ -15,7 +15,7 @@ export function FinalCta() {
         <Card className="w-full max-w-md bg-white shadow-lg">
             <CardContent className="p-6 space-y-4">
                 <div className="text-center">
-                    <p className="font-bold text-foreground">INFORMAÇÕES DE PAGAMENTO</p>
+                    <p className="font-bold text-foreground">Formas de Pagamento</p>
                 </div>
                 <div className="flex justify-center items-center gap-4">
                     <div className="flex items-center gap-2">
