@@ -6,7 +6,7 @@ const testimonials = [
   {
     name: 'Carla, mãe de Miguel (6 anos)',
     location: 'São Paulo/SP',
-    quote: "Eu estava desesperada. Miguel chorava toda vez que via uma cartilha. Em 3 semanas com o método, ele começou a formar palavras sozinho e hoje pede para 'brincar de ler' comigo. Eu recuperei a paz em casa e a autoestima do meu filho.",
+    quote: "Meu filho chorava só de saber que ia fazer a atividade cmg 😢 mas agr 3 semanas depois já tava lendo sozinho e agora até pede pra brincar de ler cmg. Nem acredito na paz que voltou aqui em casa",
     image: 'https://i.imgur.com/TIRyQcf.jpeg',
     dataAiHint: 'mother child'
   },
