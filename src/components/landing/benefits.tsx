@@ -12,7 +12,7 @@ const benefits = [
 
 const highlights = [
   { icon: Clock, text: "APENAS 15 MINUTOS POR DIA" },
-  { icon: Smile, text: "SEM CARTILHAS CHATAS" },
+  { icon: Smile, text: "CONTEÚDO INTERATIVO" },
   { icon: Sparkles, text: "SEM LÁGRIMAS OU PRESSÃO" },
   { icon: ArrowRight, text: "RESULTADOS EM 30 DIAS" }
 ]
