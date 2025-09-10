@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Check, Crown, XCircle, Star } from "lucide-react";
@@ -67,14 +66,14 @@ export function Pricing() {
 
           {/* Plano Premium */}
           <Card className="relative flex flex-col p-6 bg-gradient-to-br from-yellow-50 via-amber-100 to-yellow-50 border-4 border-amber-400 shadow-2xl rounded-2xl transition-transform hover:scale-105">
-            <div className="absolute -top-4 -right-4 bg-amber-400 text-white font-bold px-4 py-2 rounded-bl-lg text-sm transform rotate-6 shadow-lg">O melhor para seu filho</div>
+            <div className="absolute -top-4 right-1/2 translate-x-1/2 bg-amber-400 text-white font-bold px-4 py-2 rounded-md text-sm shadow-lg">O melhor para seu filho</div>
              <div className="absolute top-2 left-2 opacity-20">
                 <Star className="w-16 h-16 text-amber-300 fill-amber-300" />
             </div>
              <div className="absolute bottom-2 right-2 opacity-20">
                 <Star className="w-12 h-12 text-amber-300 fill-amber-300 transform -rotate-12" />
             </div>
-            <CardHeader className="text-center pb-4 z-10">
+            <CardHeader className="text-center pb-4 z-10 pt-8">
               <CardTitle className="text-3xl font-headline text-amber-900">PLANO PREMIUM</CardTitle>
               <CardDescription className="text-4xl font-bold text-amber-600 tracking-tighter">R$ 37,90</CardDescription>
               <p className="text-sm text-amber-800">Pagamento Único</p>
