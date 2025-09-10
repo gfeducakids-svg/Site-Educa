@@ -35,10 +35,10 @@ export function Problem() {
                 <h3 className="text-2xl font-bold tracking-tighter font-rubik text-primary">Mas imagina como seria diferente se...</h3>
             </div>
             <ul className="list-inside space-y-2 text-muted-foreground md:text-lg">
-              <li className="flex items-start gap-2"><span className="text-primary font-bold">✓</span>Seu filho aprendesse a ler com prazer e rapidez.</li>
-              <li className="flex items-start gap-2"><span className="text-primary font-bold">✓</span>A alfabetização acontecesse de forma natural e divertida.</li>
-              <li className="flex items-start gap-2"><span className="text-primary font-bold">✓</span>Você tivesse segurança para ensinar em casa.</li>
-              <li className="flex items-start gap-2"><span className="text-primary font-bold">✓</span>Seu filho desenvolvesse autoestima e gosto pela leitura, em vez de medo e resistência.</li>
+              <li className="flex items-start gap-2"><span className="text-primary font-bold">✓</span>Se seu filho aprendesse a ler com prazer e rapidez.</li>
+              <li className="flex items-start gap-2"><span className="text-primary font-bold">✓</span>Se o ensino acontecesse de forma natural e divertida.</li>
+              <li className="flex items-start gap-2"><span className="text-primary font-bold">✓</span>Se seu filho desenvolvesse autoestima e gosto pela leitura.</li>
+              <li className="flex items-start gap-2"><span className="text-primary font-bold">✓</span>Se você tivesse segurança e material para ensinar em casa.</li>
             </ul>
           </div>
         </div>
