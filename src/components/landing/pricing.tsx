@@ -65,7 +65,7 @@ export function Pricing() {
             <div className="mt-6 z-10">
                  <Button asChild size="lg" className="w-full h-auto py-4 text-lg font-headline bg-green-500 hover:bg-green-600 text-white shadow-xl transform hover:scale-105 transition-transform">
                 <Link href="https://pay.kiwify.com.br/S7SLFJY">
-                  QUERO O PLANO PREMIUM AGORA!
+                  GARANTIR MINHA VAGA
                 </Link>
               </Button>
             </div>
