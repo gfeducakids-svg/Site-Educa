@@ -44,6 +44,7 @@ export function VslPlayer() {
   const [isControlsVisible, setIsControlsVisible] = useState(true);
   const controlsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   
   // A/B Test and Player Setup Effect
   useEffect(() => {
@@ -120,12 +121,18 @@ export function VslPlayer() {
         setIsEndScreenVisible(true);
         window.dataLayer.push({ event: 'video_complete' });
     }
+    const handleLoadedMetadata = () => {
+      setIsVideoLoaded(true);
+      setDuration(video.duration);
+    }
 
     video.addEventListener('play', handlePlay);
     video.addEventListener('pause', handlePause);
     video.addEventListener('timeupdate', handleTimeUpdate);
     video.addEventListener('durationchange', handleDurationChange);
     video.addEventListener('ended', handleEnded);
+    video.addEventListener('loadedmetadata', handleLoadedMetadata);
+
 
     const attemptAutoplay = async () => {
         try {
@@ -167,6 +174,7 @@ export function VslPlayer() {
       video.removeEventListener('timeupdate', handleTimeUpdate);
       video.removeEventListener('durationchange', handleDurationChange);
       video.removeEventListener('ended', handleEnded);
+      video.removeEventListener('loadedmetadata', handleLoadedMetadata);
       document.removeEventListener('fullscreenchange', handleFullscreenChange);
       hlsRef.current?.destroy();
     };
@@ -277,18 +285,15 @@ export function VslPlayer() {
 
     if (document.pictureInPictureElement) {
         document.exitPictureInPicture();
-    } else if (document.pictureInPictureEnabled) {
+    } else if (document.pictureInPictureEnabled && isVideoLoaded) {
         video.requestPictureInPicture();
     }
   };
 
-  const [isClient, setIsClient] = useState(false);
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
   const posterUrl = `${CONFIG.IK_BASE}/${CONFIG.POSTER_PATH}?tr=f-auto,q-85`;
   const showUnmutePrompt = isPlaying && isMuted;
+  const isPiPSupported = typeof document !== 'undefined' && !!document.pictureInPictureEnabled;
+
 
   return (
     <div 
@@ -365,7 +370,7 @@ export function VslPlayer() {
 
                 <div className="flex items-center gap-1 sm:gap-2">
                     <span className="font-mono text-xs sm:text-sm">{formatTime(videoRef.current?.currentTime || 0)} / {formatTime(duration)}</span>
-                    {isClient && document.pictureInPictureEnabled && (
+                    {isPiPSupported && isVideoLoaded && (
                         <Button variant="ghost" size="icon" onClick={togglePiP} className="text-white hover:bg-white/10" aria-label="Picture-in-Picture">
                             <PictureInPicture className="w-5 h-5 sm:w-6 sm:h-6" />
                         </Button>
