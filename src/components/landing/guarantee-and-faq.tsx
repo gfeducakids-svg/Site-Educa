@@ -47,7 +47,7 @@ export function GuaranteeAndFaq() {
                 </CardHeader>
                 <CardContent className="text-center">
                     <p className="text-muted-foreground md:text-lg">
-                        Teste o Método Chinês por 7 dias completos. Se por qualquer motivo você não ficar satisfeito, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia. O risco é todo nosso.
+                        Nós acreditamos tanto na qualidade do nosso produto/serviço que oferecemos uma garantia incondicional de 7 dias. Se você não ficar satisfeito, devolvemos 100% do seu dinheiro.
                     </p>
                 </CardContent>
             </Card>
