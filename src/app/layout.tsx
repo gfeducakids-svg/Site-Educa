@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
@@ -55,7 +56,7 @@ export default function RootLayout({
               window.cpa_settings = {
                 id: d,
                 subid: e,
-                redirect: "https://pay.kiwify.com.br/S7SLFJY",
+                redirect: "/oferta-especial",
               };
             })(document, "https://cdn.utmify.com.br/scripts/back-redirect/latest-min.js", "689f78033fc84332e6dcb24d", "");
           `}
