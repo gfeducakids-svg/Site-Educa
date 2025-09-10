@@ -7,7 +7,6 @@ import { Solution } from "@/components/landing/solution";
 import { Benefits } from "@/components/landing/benefits";
 import { Urgency } from "@/components/landing/urgency";
 import { GuaranteeAndFaq } from "@/components/landing/guarantee-and-faq";
-import { FinalCta } from "@/components/landing/final-cta";
 import { SocialProofPopup } from "@/components/landing/social-proof-popup";
 import { VslPlayer } from "@/components/vsl-player";
 import { Button } from "@/components/ui/button";
@@ -49,7 +48,6 @@ export default function Home() {
         <Solution />
         <Testimonials />
         <GuaranteeAndFaq />
-        <FinalCta />
       </main>
       <Footer />
       <SocialProofPopup />
