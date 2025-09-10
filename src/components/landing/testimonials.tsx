@@ -8,21 +8,21 @@ const testimonials = [
     name: 'Carla, mãe de Miguel (6 anos)',
     location: 'São Paulo/SP',
     quote: "Meu filho chorava só de saber que ia fazer a atividade cmg 😢 mas agr 3 semanas depois já tava lendo sozinho e agora até pede pra brincar de ler cmg. Nem acredito na paz que voltou aqui em casa",
-    image: 'https://i.imgur.com/TIRyQcf.jpeg',
+    image: 'https://i.imgur.com/lj6ZGBc.jpeg',
     dataAiHint: 'mother child'
   },
   {
     name: 'Fernanda, mãe de Laura (5 anos)',
     location: 'Belo Horizonte/MG',
     quote: "Pra mim foi INCRIVEL, depois de tanta tentativa sem resultado, Laura pegou gosto de ler com esse método do nada veio se amostrar lendo o livrinho dela pra mim",
-    image: 'https://i.imgur.com/gGqTP3z.png',
+    image: 'https://i.imgur.com/cdL6AlF.jpeg',
     dataAiHint: 'mother daughter'
   },
   {
     name: 'Professor Renato',
     location: 'Escola Municipal em Curitiba/PR',
     quote: "Sou professor há 15 anos e esse é um método muito eficaz. Meus alunos sempre pedem as atividades a aprendizagem na sala virou diversão",
-    image: 'https://i.imgur.com/ihcjYdf.png',
+    image: 'https://i.imgur.com/jCmtRJ1.jpeg',
     dataAiHint: 'male teacher'
   },
 ];
