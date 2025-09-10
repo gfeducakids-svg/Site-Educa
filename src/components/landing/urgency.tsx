@@ -13,7 +13,7 @@ const PixIcon = () => (
 
 export function Urgency() {
   return (
-    <section className="w-full py-8 md:py-12 lg:py-16 bg-background">
+    <section className="w-full pt-0 pb-8 md:pb-12 lg:pb-16 bg-background">
       <div className="container px-4 md:px-6 space-y-8">
         <div className="max-w-2xl mx-auto bg-white border-2 border-destructive/20 rounded-xl shadow-lg p-6 md:p-8">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">

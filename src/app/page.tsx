@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Rocket } from "lucide-react";
 import { Footer } from "@/components/landing/footer";
+import { Pricing } from "@/components/landing/pricing";
 
 export default function Home() {
   return (
@@ -44,8 +45,9 @@ export default function Home() {
 
         <Problem />
         <Benefits />
-        <Urgency />
         <Solution />
+        <Pricing />
+        <Urgency />
         <Testimonials />
         <GuaranteeAndFaq />
       </main>
