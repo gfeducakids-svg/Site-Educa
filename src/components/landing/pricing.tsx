@@ -38,7 +38,7 @@ export function Pricing() {
           
           {/* Plano Grátis */}
           <Card className="flex flex-col justify-between p-6 bg-white shadow-md transition-transform hover:scale-105">
-            <CardHeader className="text-center pb-4">
+            <CardHeader className="text-center pb-2">
               <CardTitle className="text-2xl font-headline text-muted-foreground">SEM PLANO</CardTitle>
             </CardHeader>
             <CardContent>
