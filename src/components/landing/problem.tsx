@@ -27,7 +27,7 @@ export function Problem() {
           </div>
           <div className="space-y-4 rounded-lg bg-background p-8 shadow-lg border-2 border-accent">
             <p className="text-muted-foreground md:text-lg">
-              A verdade é que <strong className="text-foreground">não é culpa sua.</strong> Você confiou no sistema, como todo mundo faz. Ninguém ensina os pais a ensinar. O problema não está em você - está no método ultrapassado que ainda usamos para alfabetizar.
+              A verdade é que <strong className="text-foreground">não é culpa sua.</strong>Ninguém nos ensinou a como ensinar. O problema não está em você - está no método ultrapassado que ainda é utilizado para alfabetizar.
             </p>
             <div className="flex items-center gap-3 pt-4">
                 <Lightbulb className="h-8 w-8 text-primary"/>
