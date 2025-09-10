@@ -20,7 +20,7 @@ const testimonials = [
   },
   {
     name: 'Professor Renato',
-    location: 'Escola Municipal de Curitiba/PR',
+    location: 'Escola Municipal em Curitiba/PR',
     quote: "Sou professor há 15 anos e esse é um método muito eficaz. Meus alunos sempre pedem as atividades a aprendizagem na sala virou diversão",
     image: 'https://i.imgur.com/ihcjYdf.png',
     dataAiHint: 'male teacher'
