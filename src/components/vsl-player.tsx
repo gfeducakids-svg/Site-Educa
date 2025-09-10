@@ -124,25 +124,6 @@ export function VslPlayer() {
     const handleLoadedMetadata = () => {
       setIsVideoLoaded(true);
       setDuration(video.duration);
-
-      // Attempt autoplay only after metadata is loaded
-      const attemptAutoplay = async () => {
-          try {
-              video.muted = false; 
-              await video.play();
-              setIsMuted(false);
-          } catch (error) {
-              console.log('Autoplay com som bloqueado, iniciando mudo.');
-              video.muted = true;
-              setIsMuted(true);
-              try {
-                  await video.play();
-              } catch (err) {
-                  console.error("Autoplay falhou completamente.", err)
-              }
-          }
-      };
-      attemptAutoplay();
     }
 
     video.addEventListener('play', handlePlay);
@@ -154,9 +135,7 @@ export function VslPlayer() {
     
     window.playerAutoplay = () => {
       if(video) {
-        video.muted = false;
-        setIsMuted(false);
-        video.play();
+        unmuteAndPlay();
       }
     };
 
@@ -207,20 +186,20 @@ export function VslPlayer() {
 
       video.muted = false;
       setIsMuted(false);
-      video.play();
+      video.play().catch(error => console.error("Error playing video with sound:", error));
   }
 
   const togglePlay = () => {
     const video = videoRef.current;
     if (!video) return;
 
-    if (video.muted) {
+    if (video.muted && video.paused) {
         unmuteAndPlay();
         return;
     }
     
     if (video.paused) {
-      video.play();
+      video.play().catch(error => console.error("Error on play:", error));
       window.dataLayer.push({ event: 'video_play' });
     } else {
       video.pause();
@@ -281,12 +260,12 @@ export function VslPlayer() {
 
   const togglePiP = () => {
     const video = videoRef.current;
-    if (!video) return;
+    if (!video || !isVideoLoaded) return;
 
     if (document.pictureInPictureElement) {
         document.exitPictureInPicture();
-    } else if (document.pictureInPictureEnabled && isVideoLoaded) {
-        video.requestPictureInPicture();
+    } else if (document.pictureInPictureEnabled) {
+        video.requestPictureInPicture().catch(err => console.error("PiP Error:", err));
     }
   };
 
