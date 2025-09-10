@@ -11,6 +11,8 @@ const bonuses = [
   { text: "Acesso a Comunidade VIP" },
   { text: "Suporte Pedagógico Exclusivo" },
   { text: "Certificado de Conclusão Personalizado" },
+  { text: "Guia para Lidar com a Dislexia" },
+  { text: "Aulas em Vídeo com Especialistas" },
 ];
 
 const negatives = [
@@ -54,7 +56,7 @@ export function Pricing() {
           </Card>
 
           {/* Plano Premium */}
-          <Card className="flex flex-col p-6 bg-gradient-to-br from-yellow-50 via-amber-100 to-yellow-50 border-4 border-amber-400 shadow-2xl rounded-2xl transition-transform hover:scale-105 relative">
+          <Card className="relative flex flex-col p-6 bg-gradient-to-br from-yellow-50 via-amber-100 to-yellow-50 border-4 border-amber-400 shadow-2xl rounded-2xl transition-transform hover:scale-105">
             <div className="absolute -top-4 -right-4 bg-amber-400 text-white font-bold px-4 py-2 rounded-bl-lg text-sm transform rotate-6 shadow-lg">O melhor para seu filho</div>
              <div className="absolute top-2 left-2 opacity-20">
                 <Star className="w-16 h-16 text-amber-300 fill-amber-300" />
