@@ -75,7 +75,11 @@ export function Pricing() {
               <ul className="space-y-3 text-left">
                 {bonuses.map((bonus, index) => (
                   <li key={index} className="flex items-center gap-3">
-                    <Crown className="w-6 h-6 text-amber-500 flex-shrink-0" />
+                    {bonus.text.startsWith("BÔNUS:") ? (
+                        <Star className="w-6 h-6 text-amber-500 fill-amber-500 flex-shrink-0" />
+                    ) : (
+                        <Crown className="w-6 h-6 text-amber-500 flex-shrink-0" />
+                    )}
                     <span className="font-medium text-amber-900">{bonus.text}</span>
                   </li>
                 ))}
