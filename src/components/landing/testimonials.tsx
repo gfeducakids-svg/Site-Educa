@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Star } from 'lucide-react';
 import Image from 'next/image';
@@ -13,7 +14,7 @@ const testimonials = [
   {
     name: 'Fernanda, mãe de Laura (5 anos)',
     location: 'Belo Horizonte/MG',
-    quote: "Tentei apps, reforço, até psicopedagoga. Nada funcionava. Com o grafismo chinês, Laura aprendeu brincando. Ela mesma disse: 'Mamãe, agora eu sei ler de verdade!' Vale muito mais que os R$ 27,90 que paguei.",
+    quote: "Pra mim foi INCRIVEL, depois de tanta tentativa sem resultado, Laura pegou gosto de ler com esse método do nada veio se amostrar lendo o livrinho dela pra mim",
     image: 'https://i.imgur.com/gGqTP3z.png',
     dataAiHint: 'mother daughter'
   },
