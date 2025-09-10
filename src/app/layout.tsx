@@ -40,6 +40,26 @@ export default function RootLayout({
             document.head.appendChild(a);
           `}
         </Script>
+        <Script id="back-redirect" strategy="afterInteractive">
+          {`
+            (function (b, c, d, e) {
+              if (window.innerWidth > 768) return;
+              var a = b.getElementsByTagName("head")[0];
+              if (!a) {
+                return;
+              }
+              var f = b.createElement("script");
+              f.async = true;
+              f.src = c;
+              a.appendChild(f);
+              window.cpa_settings = {
+                id: d,
+                subid: e,
+                redirect: "https://pay.kiwify.com.br/S7SLFJY",
+              };
+            })(document, "https://cdn.utmify.com.br/scripts/back-redirect/latest-min.js", "689f78033fc84332e6dcb24d", "");
+          `}
+        </Script>
       </head>
       <body className="font-body antialiased bg-background text-foreground overflow-x-hidden">
         {children}
