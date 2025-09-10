@@ -10,7 +10,7 @@ export function Problem() {
               Você não está sozinho(a) nessa luta...
             </h2>
             <p className="text-muted-foreground md:text-lg">
-              Se você chegou até aqui, é porque já viveu aqueles momentos de frustração: seu filho chorando na hora da lição, você se sentindo perdido sem saber como ajudar, e aquela voz na sua cabeça sussurrando "será que sou um mau pai/mãe?"
+              Se você está aqui, é porque já viveu aqueles momentos de frustração do tipo seu filho chorando na hora da lição, você se sentindo perdida sem saber como ajudar, e aquela voz na sua cabeça "será que sou uma péssima mãe?"
             </p>
             <div className="bg-background p-6 rounded-lg shadow-md space-y-4">
                 <div className="flex items-center gap-3">
