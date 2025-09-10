@@ -13,6 +13,8 @@ const bonuses = [
   { text: "Certificado de Conclusão Personalizado" },
   { text: "Guia para Lidar com a Dislexia" },
   { text: "Aulas em Vídeo com Especialistas" },
+  { text: "BÔNUS: Acesso Vitalício ao Conteúdo" },
+  { text: "BÔNUS: Grupo Exclusivo para Pais" },
 ];
 
 const negatives = [
