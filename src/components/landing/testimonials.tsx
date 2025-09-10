@@ -21,7 +21,7 @@ const testimonials = [
   {
     name: 'Professor Renato',
     location: 'Escola Municipal de Curitiba/PR',
-    quote: "Em 15 anos de magistério, nunca vi método tão eficaz. Meus alunos pedem para fazer as atividades de grafismo. A alfabetização virou diversão na minha sala. Recomendo para todos os colegas.",
+    quote: "Sou professor há 15 anos e esse é um método muito eficaz. Meus alunos sempre pedem as atividades a aprendizagem na sala virou diversão",
     image: 'https://i.imgur.com/ihcjYdf.png',
     dataAiHint: 'male teacher'
   },
