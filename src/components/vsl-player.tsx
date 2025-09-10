@@ -124,6 +124,25 @@ export function VslPlayer() {
     const handleLoadedMetadata = () => {
       setIsVideoLoaded(true);
       setDuration(video.duration);
+
+      // Attempt autoplay only after metadata is loaded
+      const attemptAutoplay = async () => {
+          try {
+              video.muted = false; 
+              await video.play();
+              setIsMuted(false);
+          } catch (error) {
+              console.log('Autoplay com som bloqueado, iniciando mudo.');
+              video.muted = true;
+              setIsMuted(true);
+              try {
+                  await video.play();
+              } catch (err) {
+                  console.error("Autoplay falhou completamente.", err)
+              }
+          }
+      };
+      attemptAutoplay();
     }
 
     video.addEventListener('play', handlePlay);
@@ -132,25 +151,6 @@ export function VslPlayer() {
     video.addEventListener('durationchange', handleDurationChange);
     video.addEventListener('ended', handleEnded);
     video.addEventListener('loadedmetadata', handleLoadedMetadata);
-
-
-    const attemptAutoplay = async () => {
-        try {
-            video.muted = false; // Tenta tocar com som primeiro
-            setIsMuted(false);
-            await video.play();
-        } catch (error) {
-            console.log('Autoplay com som bloqueado, iniciando mudo.');
-            video.muted = true;
-            setIsMuted(true);
-            try {
-                await video.play();
-            } catch (err) {
-                console.error("Autoplay falhou completamente.", err)
-            }
-        }
-    };
-    attemptAutoplay();
     
     window.playerAutoplay = () => {
       if(video) {
