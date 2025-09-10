@@ -18,7 +18,7 @@ export function Problem() {
                     <h3 className="text-2xl font-bold font-rubik text-primary">Eu sei exatamente como você se sente.</h3>
                 </div>
                 <p className="text-muted-foreground">
-                  Já ouvi centenas de pais me contarem: "Contratei uma professora, mas ele não avançou muito..." "Fiz tudo certinho com as cartilhas, mas ele não se interessava." "Achei que o app fosse ajudar, mas ele só queria jogar."
+                  Já ouvi centenas de pais me contarem: "Contratei uma professora, mas não mudou muito..." "Fiz tudo certo, mas ele não se interessava." "Ele só quer jogar."
                 </p>
                 <p className="text-muted-foreground border-l-4 border-primary pl-4 italic">
                   E o pior são os comentários que machucam: "Ele ainda não sabe ler? Mas meu filho aprendeu com 5 anos." "Você que é mãe, devia estar ajudando mais, né?"
