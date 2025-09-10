@@ -13,6 +13,15 @@ const bonuses = [
   { text: "Certificado de Conclusão Personalizado" },
 ];
 
+const negatives = [
+    { text: "Continua sem saber ler" },
+    { text: "Frustração e choro nas tarefas" },
+    { text: "Sentimento de 'ser o último' da turma" },
+    { text: "Horas perdidas em métodos que não funcionam" },
+    { text: "Autoestima da criança é prejudicada" }
+];
+
+
 export function Pricing() {
   return (
     <section className="w-full py-8 md:py-12 lg:py-16 bg-background">
@@ -28,13 +37,19 @@ export function Pricing() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-12 items-stretch">
           
           {/* Plano Grátis */}
-          <Card className="flex flex-col justify-center p-6 bg-white shadow-md transition-transform hover:scale-105">
+          <Card className="flex flex-col justify-between p-6 bg-white shadow-md transition-transform hover:scale-105">
             <CardHeader className="text-center pb-4">
               <CardTitle className="text-2xl font-headline text-muted-foreground">SEM PLANO</CardTitle>
             </CardHeader>
-            <CardContent className="flex flex-col items-center text-center">
-              <XCircle className="w-16 h-16 text-destructive mb-4" />
-              <p className="text-lg font-semibold text-foreground">Seu filho continua sem saber ler, sentindo-se frustrado e para trás.</p>
+            <CardContent>
+                <ul className="space-y-3 text-left">
+                {negatives.map((neg, index) => (
+                  <li key={index} className="flex items-center gap-3">
+                    <XCircle className="w-5 h-5 text-destructive flex-shrink-0" />
+                    <span className="text-muted-foreground">{neg.text}</span>
+                  </li>
+                ))}
+              </ul>
             </CardContent>
           </Card>
 
