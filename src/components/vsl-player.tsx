@@ -45,6 +45,8 @@ export function VslPlayer() {
   const controlsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [showUnmutePrompt, setShowUnmutePrompt] = useState(false);
+  
   
   // A/B Test and Player Setup Effect
   useEffect(() => {
@@ -91,7 +93,12 @@ export function VslPlayer() {
       video.currentTime = savedTime;
     }
 
-    const handlePlay = () => setIsPlaying(true);
+    const handlePlay = () => {
+      setIsPlaying(true);
+      if (video.muted) {
+        setShowUnmutePrompt(true);
+      }
+    }
     const handlePause = () => setIsPlaying(false);
     const handleTimeUpdate = () => {
       const current = video.currentTime;
@@ -186,6 +193,7 @@ export function VslPlayer() {
 
       video.muted = false;
       setIsMuted(false);
+      setShowUnmutePrompt(false);
       video.play().catch(error => console.error("Error playing video with sound:", error));
   }
 
@@ -212,6 +220,9 @@ export function VslPlayer() {
     if (!video) return;
     video.muted = !video.muted;
     setIsMuted(video.muted);
+    if (!video.muted) {
+        setShowUnmutePrompt(false);
+    }
   };
 
   const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -223,6 +234,7 @@ export function VslPlayer() {
     if (newVolume > 0 && isMuted) {
         video.muted = false;
         setIsMuted(false);
+        setShowUnmutePrompt(false);
     } else if (newVolume === 0) {
         video.muted = true;
         setIsMuted(true);
@@ -270,7 +282,6 @@ export function VslPlayer() {
   };
 
   const posterUrl = `${CONFIG.IK_BASE}/${CONFIG.POSTER_PATH}?tr=f-auto,q-85`;
-  const showUnmutePrompt = isPlaying && isMuted;
   const isPiPSupported = typeof document !== 'undefined' && !!document.pictureInPictureEnabled;
 
 
@@ -385,3 +396,4 @@ export function VslPlayer() {
     </div>
   );
 }
+
