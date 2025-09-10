@@ -21,7 +21,7 @@ export function Problem() {
                   Já ouvi centenas de pais me contarem: "Contratei uma professora, mas não mudou muito..." "Fiz tudo certo, mas ele não se interessava." "Ele só quer jogar."
                 </p>
                 <p className="text-muted-foreground border-l-4 border-primary pl-4 italic">
-                  E o pior são os comentários que machucam: "Ele ainda não sabe ler? Mas meu filho aprendeu com 5 anos." "Você que é mãe, devia estar ajudando mais, né?"
+                  E o pior são os comentários das pessoas: "Ele ainda não sabe ler? Mas meu filho aprendeu com 5 anos." "Você que é mãe, devia estar se esforçando mais, né?"
                 </p>
             </div>
           </div>
