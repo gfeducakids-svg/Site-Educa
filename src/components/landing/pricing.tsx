@@ -45,7 +45,7 @@ export function Pricing() {
                 <ul className="space-y-3 text-left">
                 {negatives.map((neg, index) => (
                   <li key={index} className="flex items-center gap-3">
-                    <XCircle className="w-5 h-5 text-destructive flex-shrink-0" />
+                    <XCircle className="w-5 h-3 text-destructive flex-shrink-0" />
                     <span className="text-muted-foreground">{neg.text}</span>
                   </li>
                 ))}

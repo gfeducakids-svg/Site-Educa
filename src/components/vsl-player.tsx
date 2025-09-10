@@ -129,6 +129,8 @@ export function VslPlayer() {
 
     const attemptAutoplay = async () => {
         try {
+            video.muted = false; // Tenta tocar com som primeiro
+            setIsMuted(false);
             await video.play();
         } catch (error) {
             console.log('Autoplay com som bloqueado, iniciando mudo.');
@@ -191,10 +193,24 @@ export function VslPlayer() {
     return () => container.removeEventListener('mousemove', handleMouseMove);
   }, [isPlaying]);
 
+  const unmuteAndPlay = () => {
+      const video = videoRef.current;
+      if (!video) return;
+
+      video.muted = false;
+      setIsMuted(false);
+      video.play();
+  }
 
   const togglePlay = () => {
     const video = videoRef.current;
     if (!video) return;
+
+    if (video.muted) {
+        unmuteAndPlay();
+        return;
+    }
+    
     if (video.paused) {
       video.play();
       window.dataLayer.push({ event: 'video_play' });
@@ -272,6 +288,7 @@ export function VslPlayer() {
   }, []);
 
   const posterUrl = `${CONFIG.IK_BASE}/${CONFIG.POSTER_PATH}?tr=f-auto,q-85`;
+  const showUnmutePrompt = isPlaying && isMuted;
 
   return (
     <div 
@@ -284,9 +301,21 @@ export function VslPlayer() {
     >
       <video ref={videoRef} playsInline className="w-full h-full" poster={posterUrl} onClick={togglePlay} />
 
+      {showUnmutePrompt && (
+        <div 
+            className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center text-white z-20 cursor-pointer animate-fade-in"
+            onClick={unmuteAndPlay}
+        >
+            <VolumeX className="w-12 h-12 mb-4" />
+            <h3 className="text-2xl font-bold">Seu vídeo já começou</h3>
+            <p className="text-lg">Clique para ouvir</p>
+        </div>
+      )}
+
       <div className={cn(
         "vsl-controls-overlay absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 opacity-0 group-hover/player:opacity-100 transition-opacity duration-300",
-        isControlsVisible && 'opacity-100'
+        isControlsVisible && 'opacity-100',
+        showUnmutePrompt && 'hidden' // Oculta os controles quando o prompt de desmutar estiver visível
       )}>
         {/* Play/Pause Button in Center */}
         <div className="absolute inset-0 flex items-center justify-center">
