@@ -3,7 +3,6 @@ import { AvailabilityBar } from "@/components/landing/availability-bar";
 import { Hero } from "@/components/landing/hero";
 import { Testimonials } from "@/components/landing/testimonials";
 import { Problem } from "@/components/landing/problem";
-import { Solution } from "@/components/landing/solution";
 import { Benefits } from "@/components/landing/benefits";
 import { Urgency } from "@/components/landing/urgency";
 import { GuaranteeAndFaq } from "@/components/landing/guarantee-and-faq";
@@ -45,7 +44,6 @@ export default function Home() {
 
         <Problem />
         <Benefits />
-        <Solution />
         <Pricing />
         <Urgency />
         <Testimonials />
