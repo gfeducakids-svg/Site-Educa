@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Check, Crown, XCircle, Star } from "lucide-react";
@@ -41,10 +42,7 @@ export function Pricing() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-12 items-stretch">
           
           {/* Plano Grátis */}
-          <Card className="flex flex-col justify-between p-6 bg-white shadow-md transition-transform hover:scale-105">
-            <CardHeader className="text-center pb-2">
-              
-            </CardHeader>
+          <Card className="flex flex-col justify-between p-4 bg-white shadow-md transition-transform hover:scale-105">
             <CardContent>
                 <Image
                   src="https://i.imgur.com/UVJxHiG.png"
