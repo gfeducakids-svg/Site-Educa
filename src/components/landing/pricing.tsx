@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Check, Crown, XCircle, Star } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const bonuses = [
   { text: "Atividades Extras para Imprimir" },
@@ -46,6 +47,13 @@ export function Pricing() {
               <CardTitle className="text-2xl font-headline text-muted-foreground">SEM PLANO</CardTitle>
             </CardHeader>
             <CardContent>
+                <Image
+                  src="https://i.imgur.com/UVJxHiG.png"
+                  alt="Criança frustrada com estudos"
+                  width={300}
+                  height={200}
+                  className="mx-auto rounded-lg mb-4"
+                />
                 <ul className="space-y-3 text-left">
                 {negatives.map((neg, index) => (
                   <li key={index} className="flex items-center gap-3">
