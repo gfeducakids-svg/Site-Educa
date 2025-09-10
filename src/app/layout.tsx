@@ -44,22 +44,6 @@ export default function RootLayout({
       <body className="font-body antialiased bg-background text-foreground overflow-x-hidden">
         {children}
         <Toaster />
-        <Script id="exit-stopper" strategy="afterInteractive">
-          {`
-            window.redirectURL = "https://xn--educacrianas-tdb.site/ofertaimperdivel/";
-
-            function exitStopper() {
-              if (window.redirectURL) {
-                window.location.href = window.redirectURL;
-              }
-            }
-
-            history.pushState(null, null, location.href);
-            window.addEventListener("popstate", function () {
-              exitStopper();
-            });
-          `}
-        </Script>
       </body>
     </html>
   );
