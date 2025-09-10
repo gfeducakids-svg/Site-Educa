@@ -5,7 +5,7 @@ const benefits = [
   { icon: Clock, title: "SEU FILHO VAI APRENDER A LER 3X MAIS RÁPIDO", description: "Em apenas 30 dias, você verá resultados que outros métodos levam meses para alcançar." },
   { icon: BotMessageSquare, title: "MOMENTOS DE CONEXÃO EM VEZ DE LÁGRIMAS", description: "Transforme a hora da lição em momentos especiais de diversão e cumplicidade." },
   { icon: Home, title: "SEGURANÇA TOTAL PARA ENSINAR EM CASA", description: "Você terá um método passo-a-passo que funciona, mesmo sem experiência em educação." },
-  { icon: Clock, title: "ECONOMIZE 5+ HORAS POR SEMANA", description: "Apenas 15 minutos/dia substituem horas de lutas com os métodos tradicionais" },
+  { icon: Clock, title: "ECONOMIZE +8 HORAS POR SEMANA", description: "Apenas 15 minutos/dia substituem horas de lutas com os métodos tradicionais" },
   { icon: Smile, title: "AUTOESTIMA E CONFIANÇA DA CRIANÇA", description: "Seu filho vai se sentir capaz e inteligente, não mais \"burro\" ou \"atrasado\"." },
   { icon: Wallet, title: "PARE DE GASTAR COM REFORÇOS QUE NÃO FUNCIONAM", description: "Um investimento único de R$ 37,90 substitui meses de aulas particulares caras." },
   { icon: Palette, title: "APRENDIZADO NATURAL E DIVERTIDO", description: "Usa a capacidade que a criança já tem: associar desenhos a significados." },
