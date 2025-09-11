@@ -1,3 +1,4 @@
+
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ShieldCheck, Mail, Clock, Wallet, Check, BrainCircuit, Users, Laptop } from "lucide-react";
@@ -11,7 +12,7 @@ const faqs = [
   {
     icon: Wallet,
     question: "MUITO CARO",
-    answer: "R$ 37,90 é menos que uma pizza. Uma aula particular custa R$ 50/hora. Você economiza centenas e ainda tem garantia total."
+    answer: "R$ 47,90 é menos que uma pizza. Uma aula particular custa R$ 50/hora. Você economiza centenas e ainda tem garantia total."
   },
   {
     icon: Users,

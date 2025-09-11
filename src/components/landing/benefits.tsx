@@ -7,7 +7,7 @@ const benefits = [
   { icon: Home, title: "SEGURANÇA TOTAL PARA ENSINAR EM CASA", description: "Você terá um método passo-a-passo que funciona, mesmo sem ter experiência em educação." },
   { icon: Clock, title: "ECONOMIZE +8 HORAS POR SEMANA", description: "Apenas 15 minutos/dia substituem horas de lutas com os métodos tradicionais" },
   { icon: Smile, title: "AUTOESTIMA E CONFIANÇA DA CRIANÇA", description: "Seu filho vai ser elogiado e se sentir capaz e inteligente ao invés de \"atrasado\" ou \"incapaz\"" },
-  { icon: Wallet, title: "NUNCA MAIS GASTE COM REFORÇOS QUE NÃO FUNCIONAM", description: "Um investimento único de R$ 37,90 substitui meses de aulas particulares caras." },
+  { icon: Wallet, title: "NUNCA MAIS GASTE COM REFORÇOS QUE NÃO FUNCIONAM", description: "Um investimento único de R$ 47,90 substitui meses de aulas particulares caras." },
 ];
 
 const highlights = [

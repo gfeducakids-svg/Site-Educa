@@ -16,6 +16,7 @@ import Link from "next/link";
 import { Rocket } from "lucide-react";
 import { Footer } from "@/components/landing/footer";
 import { Pricing } from "@/components/landing/pricing";
+import { WhyPrice } from "@/components/landing/why-price";
 
 export default function Home() {
   const [vacancies, setVacancies] = useState(25);
@@ -53,6 +54,7 @@ export default function Home() {
 
         <Problem />
         <Benefits />
+        <WhyPrice />
         <Pricing />
         <Urgency />
         <Testimonials />

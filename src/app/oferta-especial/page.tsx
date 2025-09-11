@@ -55,7 +55,7 @@ export default function OfertaEspecialPage() {
                 </div>
                 <CardHeader className="text-center pb-4 z-10 pt-8">
                 <CardTitle className="text-3xl font-headline text-amber-900">PLANO PREMIUM</CardTitle>
-                <CardDescription className="text-4xl font-bold text-amber-600 tracking-tighter">R$ 37,90</CardDescription>
+                <CardDescription className="text-4xl font-bold text-amber-600 tracking-tighter">R$ 47,90</CardDescription>
                 <p className="text-sm text-amber-800">Pagamento Único</p>
                 </CardHeader>
                 <CardContent className="flex-grow z-10">
