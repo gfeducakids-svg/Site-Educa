@@ -18,13 +18,32 @@ export default function RootLayout({
     <html lang="pt-BR">
       <head>
         <link rel="icon" href="https://i.imgur.com/DEZmyj9.png" />
+        
+        {/* Preconnect and DNS Prefetch */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link rel="preconnect" href="https://i.imgur.com" />
+        <link rel="preconnect" href="https://pay.kiwify.com.br" />
+        <link rel="dns-prefetch" href="https://cdn.utmify.com.br" />
+
+        {/* Preload Fonts */}
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet" />
-        <link rel="prefetch" href="https://xn--educacrianas-tdb.site/ofertaimperdivel/" />
+        
+        {/* Preload Images */}
+        <link rel="preload" as="image" href="https://i.imgur.com/DEZmyj9.png" />
+        <link rel="preload" as="image" href="https://i.imgur.com/UVJxHiG.png" />
+        <link rel="preload" as="image" href="https://i.imgur.com/lj6ZGBc.jpeg" />
+        <link rel="preload" as="image" href="https://i.imgur.com/cdL6AlF.jpeg" />
+        <link rel="preload" as="image" href="https://i.imgur.com/jCmtRJ1.jpeg" />
+
+        {/* Prefetch Links */}
+        <link rel="prefetch" href="https://pay.kiwify.com.br/S7SLFJY" />
+        <link rel="prefetch" href="/oferta-especial" />
+        
         <Script
+          id="utmify-script"
           src="https://cdn.utmify.com.br/scripts/utms/latest.js"
           data-utmify-prevent-xcod-sck=""
           data-utmify-prevent-subids=""
