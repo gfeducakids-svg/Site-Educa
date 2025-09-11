@@ -6,20 +6,20 @@ import { Progress } from '@/components/ui/progress';
 import { Hourglass } from 'lucide-react';
 
 export function AvailabilityBar() {
-  const [vacancies, setVacancies] = useState(78);
+  const [vacancies, setVacancies] = useState(25);
   const maxVacancies = 150;
 
   useEffect(() => {
-    // Set initial random vacancies between 60 and 80
-    setVacancies(Math.floor(Math.random() * (80 - 60 + 1)) + 60);
+    // Set initial vacancies to 25
+    setVacancies(25);
   }, []);
 
   useEffect(() => {
-    if (vacancies <= 20) return; // Stop countdown at a lower limit
+    if (vacancies <= 5) return; // Stop countdown at a lower limit
 
     const interval = setInterval(() => {
-      setVacancies((prev) => (prev > 20 ? prev - 1 : prev));
-    }, 8000 + Math.random() * 4000); // Decrease every 8-12 seconds
+      setVacancies((prev) => (prev > 5 ? prev - 1 : prev));
+    }, 15000 + Math.random() * 5000); // Decrease every 15-20 seconds
 
     return () => clearInterval(interval);
   }, [vacancies]);
