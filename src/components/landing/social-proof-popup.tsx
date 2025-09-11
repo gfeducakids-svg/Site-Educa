@@ -27,24 +27,33 @@ export function SocialProofPopup({ onNewPurchase }: SocialProofPopupProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const cycleNames = () => {
+    let timeoutId: NodeJS.Timeout;
+
+    const showRandomPopup = () => {
       const name = names[Math.floor(Math.random() * names.length)];
       setCurrentName(name);
       setIsVisible(true);
-      onNewPurchase(); // Call the function to decrease vacancy
+      onNewPurchase();
 
+      // Hide popup after 4 seconds
       setTimeout(() => {
         setIsVisible(false);
-      }, 4000); // Hide after 4 seconds
+      }, 4000);
+
+      // Schedule the next popup
+      scheduleNext();
     };
 
-    // Staggered popups
-    const id = setInterval(cycleNames, 8000 + Math.random() * 5000); // every 8-13 seconds
-    const firstCall = setTimeout(cycleNames, 6000) // first one after 6 seconds
+    const scheduleNext = () => {
+      const randomInterval = Math.random() * (10000 - 3000) + 3000; // Random time between 3 and 10 seconds
+      timeoutId = setTimeout(showRandomPopup, randomInterval);
+    };
+
+    // Initial call
+    scheduleNext();
 
     return () => {
-        clearInterval(id)
-        clearTimeout(firstCall)
+      clearTimeout(timeoutId);
     };
   }, [onNewPurchase]);
 
