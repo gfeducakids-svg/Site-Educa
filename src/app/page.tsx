@@ -54,8 +54,8 @@ export default function Home() {
 
         <Problem />
         <Benefits />
-        <WhyPrice />
         <Pricing />
+        <WhyPrice />
         <Urgency />
         <Testimonials />
         <GuaranteeAndFaq />
