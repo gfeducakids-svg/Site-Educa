@@ -21,7 +21,7 @@ export default function Home() {
   const [vacancies, setVacancies] = useState(25);
 
   const decreaseVacancy = () => {
-    setVacancies((prev) => (prev > 5 ? prev - 1 : 5));
+    setVacancies((prev) => (prev > 1 ? prev - 1 : 1));
   };
 
   return (
