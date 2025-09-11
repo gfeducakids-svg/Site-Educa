@@ -35,7 +35,7 @@ export default function Home() {
                   <Button asChild size="lg" className="h-auto py-3 px-4 text-[10px] min-[370px]:text-xs sm:text-base font-headline bg-green-500 hover:bg-green-600 text-primary-foreground shadow-lg text-center">
                     <Link href="https://pay.kiwify.com.br/S7SLFJY">
                       <Rocket className="mr-2 h-5 w-5" />
-                      QUERO QUE MEU FILHO LEIA EM 30 DIAS
+                      SIM QUERO O MÉTODO
                     </Link>
                   </Button>
                 </div>
