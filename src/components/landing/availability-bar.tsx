@@ -20,7 +20,7 @@ export function AvailabilityBar({ vacancies }: AvailabilityBarProps) {
           <div className="flex-grow text-left">
               <span className="text-xs sm:text-base truncate block"> RESTAM: {vacancies} VAGAS</span>
           </div>
-          <div className="w-2/5 max-w-[250px] flex-shrink-0">
+          <div className="w-2/5 max-w-[250px]">
             <Progress value={100 - progressValue} className="h-3 sm:h-4 bg-white border-2 border-black" indicatorClassName="bg-destructive" />
           </div>
         </div>
