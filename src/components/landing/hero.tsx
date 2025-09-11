@@ -15,7 +15,7 @@ export function Hero() {
                 DESCUBRA o Método Chinês em APP que alfabetiza crianças com apenas 15 minutos por dia!
               </h1>
               <p className="max-w-[600px] text-muted-foreground md:text-xl font-rubik mx-auto">
-                3x mais rápido que métodos tradicionais para mães que querem alfabetizar sem lágrimas ou pressão em apenas 30 dias.
+                <span className="text-primary font-bold">3x Mais eficaz que métodos tradicionais</span> para mães que querem alfabetizar sem lágrimas ou pressão em apenas 30 dias.
               </p>
             </div>
           </div>
