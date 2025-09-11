@@ -18,7 +18,7 @@ export function AvailabilityBar({ vacancies }: AvailabilityBarProps) {
       <div className="container mx-auto flex flex-col items-center justify-center gap-1">
         <div className="flex w-full items-center justify-center gap-2 sm:gap-4 flex-nowrap">
           <Hourglass className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0" />
-          <div className="flex-grow text-left">
+          <div className="flex-grow-0 text-center">
               <span className="text-xs sm:text-base block whitespace-nowrap"> RESTAM: {vacancies} VAGAS</span>
           </div>
           <div className="w-2/5 max-w-[250px]">
