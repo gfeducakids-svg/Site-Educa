@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -17,7 +18,11 @@ const names = [
 "Eduardo Santana Meireles", "Roberta Cardoso Maciel"
 ];
 
-export function SocialProofPopup() {
+interface SocialProofPopupProps {
+  onNewPurchase: () => void;
+}
+
+export function SocialProofPopup({ onNewPurchase }: SocialProofPopupProps) {
   const [currentName, setCurrentName] = useState('');
   const [isVisible, setIsVisible] = useState(false);
 
@@ -26,6 +31,7 @@ export function SocialProofPopup() {
       const name = names[Math.floor(Math.random() * names.length)];
       setCurrentName(name);
       setIsVisible(true);
+      onNewPurchase(); // Call the function to decrease vacancy
 
       setTimeout(() => {
         setIsVisible(false);
@@ -40,7 +46,7 @@ export function SocialProofPopup() {
         clearInterval(id)
         clearTimeout(firstCall)
     };
-  }, []);
+  }, [onNewPurchase]);
 
   return (
     <div

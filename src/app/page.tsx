@@ -1,4 +1,7 @@
 
+"use client";
+
+import { useState } from "react";
 import { AvailabilityBar } from "@/components/landing/availability-bar";
 import { Hero } from "@/components/landing/hero";
 import { Testimonials } from "@/components/landing/testimonials";
@@ -15,6 +18,12 @@ import { Footer } from "@/components/landing/footer";
 import { Pricing } from "@/components/landing/pricing";
 
 export default function Home() {
+  const [vacancies, setVacancies] = useState(25);
+
+  const decreaseVacancy = () => {
+    setVacancies((prev) => (prev > 5 ? prev - 1 : 5));
+  };
+
   return (
     <div className="flex flex-col min-h-dvh w-full overflow-x-hidden bg-aderecos">
       <div className="star-1"></div>
@@ -24,7 +33,7 @@ export default function Home() {
       <div className="star-5"></div>
       <div className="bg-aderecos::before"></div>
       <div className="bg-aderecos::after"></div>
-      <AvailabilityBar />
+      <AvailabilityBar vacancies={vacancies} />
       <main className="flex-1 relative z-10">
         <Hero />
 
@@ -50,7 +59,7 @@ export default function Home() {
         <GuaranteeAndFaq />
       </main>
       <Footer />
-      <SocialProofPopup />
+      <SocialProofPopup onNewPurchase={decreaseVacancy} />
     </div>
   );
 }

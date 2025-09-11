@@ -1,28 +1,15 @@
 
 "use client";
 
-import { useState, useEffect } from 'react';
 import { Progress } from '@/components/ui/progress';
 import { Hourglass } from 'lucide-react';
 
-export function AvailabilityBar() {
-  const [vacancies, setVacancies] = useState(25);
+interface AvailabilityBarProps {
+  vacancies: number;
+}
+
+export function AvailabilityBar({ vacancies }: AvailabilityBarProps) {
   const maxVacancies = 150;
-
-  useEffect(() => {
-    // Set initial vacancies to 25
-    setVacancies(25);
-  }, []);
-
-  useEffect(() => {
-    if (vacancies <= 5) return; // Stop countdown at a lower limit
-
-    const interval = setInterval(() => {
-      setVacancies((prev) => (prev > 5 ? prev - 1 : prev));
-    }, 15000 + Math.random() * 5000); // Decrease every 15-20 seconds
-
-    return () => clearInterval(interval);
-  }, [vacancies]);
 
   const progressValue = ((vacancies) / maxVacancies) * 100;
 
