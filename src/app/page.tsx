@@ -61,7 +61,7 @@ export default function Home() {
         <GuaranteeAndFaq />
       </main>
       <Footer />
-      <SocialProofPopup onNewPurchase={decreaseVacancy} />
+      {vacancies > 1 && <SocialProofPopup onNewPurchase={decreaseVacancy} />}
     </div>
   );
 }
