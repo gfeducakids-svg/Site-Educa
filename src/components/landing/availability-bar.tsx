@@ -9,7 +9,7 @@ interface AvailabilityBarProps {
 }
 
 export function AvailabilityBar({ vacancies }: AvailabilityBarProps) {
-  const maxVacancies = 150;
+  const maxVacancies = 500;
 
   const progressValue = ((vacancies) / maxVacancies) * 100;
 
