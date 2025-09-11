@@ -45,7 +45,7 @@ export function SocialProofPopup({ onNewPurchase }: SocialProofPopupProps) {
     };
 
     const scheduleNext = () => {
-      const randomInterval = Math.random() * (10000 - 3000) + 3000; // Random time between 3 and 10 seconds
+      const randomInterval = Math.random() * (9000 - 4000) + 4000; // Random time between 4 and 9 seconds
       timeoutId = setTimeout(showRandomPopup, randomInterval);
     };
 
