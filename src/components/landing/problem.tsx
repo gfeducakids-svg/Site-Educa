@@ -8,7 +8,7 @@ export function Problem() {
         <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="space-y-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-foreground">
-              Você não está sozinho(a) nessa luta...
+              Você não está sozinha nessa luta...
             </h2>
             <p className="text-muted-foreground md:text-lg">
               Se você está aqui, é porque já viveu aqueles momentos de frustração do tipo seu filho chorando na hora da lição, você se sentindo perdida sem saber como ajudar, e aquela voz na sua cabeça "será que sou uma péssima mãe?"
