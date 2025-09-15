@@ -62,7 +62,7 @@ export default function OfertaEspecialPage() {
                 <ul className="space-y-3 text-left">
                     {bonuses.map((bonus, index) => (
                     <li key={index} className="flex items-center gap-3">
-                        {bonus.text.startsWith("BÔNUS:") ? (
+                        {bonus && bonus.text && bonus.text.startsWith("BÔNUS:") ? (
                             <Star className="w-6 h-6 text-amber-500 fill-amber-500 flex-shrink-0" />
                         ) : (
                             <Crown className="w-6 h-6 text-amber-500 flex-shrink-0" />
