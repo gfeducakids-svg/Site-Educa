@@ -38,7 +38,6 @@ export function VslPlayer() {
   useEffect(() => {
     if (typeof window === 'undefined' || !iframeRef.current) return;
 
-    // Re-inicializa o player do Vimeo para ter controle programático
     const player = new Player(iframeRef.current);
     playerRef.current = player;
     window.dataLayer = window.dataLayer || [];
@@ -47,7 +46,6 @@ export function VslPlayer() {
       window.dataLayer.push({ event: 'video_play' });
       player.getMuted().then(muted => {
           setIsMuted(muted);
-          // O botão de unmute só deve aparecer se o vídeo de fato estiver mudo
           setShowUnmuteButton(muted);
       });
     };
@@ -70,23 +68,29 @@ export function VslPlayer() {
     player.on('ended', onEnded);
     player.on('pause', () => window.dataLayer.push({ event: 'video_pause' }));
     
-    // Garante que o estado de mudo seja atualizado corretamente
     player.on('volumechange', (data: { volume: number }) => {
         const muted = data.volume === 0;
         setIsMuted(muted);
         setShowUnmuteButton(muted);
     });
 
-    // Recupera o tempo salvo
     const savedTime = parseFloat(localStorage.getItem(`vimeoTime_${CONFIG.VIMEO_VIDEO_ID}`) || '0');
     if (savedTime > 0) {
       player.setCurrentTime(savedTime).catch(e => console.warn("Não foi possível definir o tempo do vídeo."));
     }
+    
+    // Tenta dar play no vídeo (geralmente só funciona se estiver mudo)
+    player.play().catch(() => {
+        console.log("Autoplay bloqueado pelo navegador, aguardando interação do usuário.");
+        setShowUnmuteButton(true);
+    });
 
-    // Lógica do Player Flutuante (Sticky)
+    // Garante que o vídeo comece mudo
+    player.setMuted(true);
+
     const observer = new IntersectionObserver(
       ([entry]) => setIsSticky(!entry.isIntersecting),
-      { threshold: 0.5 } // Ativa quando 50% do player está fora da tela
+      { threshold: 0.5 }
     );
 
     if (wrapperRef.current) {
@@ -104,7 +108,7 @@ export function VslPlayer() {
       playerRef.current.setMuted(false).then(() => {
         setIsMuted(false);
         setShowUnmuteButton(false);
-        playerRef.current?.play(); // Garante que o vídeo toque
+        playerRef.current?.play();
       }).catch(e => console.error("Erro ao desmutar o vídeo:", e));
     }
   };
@@ -112,7 +116,7 @@ export function VslPlayer() {
   return (
     <div ref={wrapperRef} className={cn(
         "w-full max-w-4xl mx-auto transition-all duration-300",
-        isSticky ? 'h-[12.5rem]' : 'h-auto' // Altura do placeholder para o vídeo sticky
+        isSticky ? 'h-[12.5rem]' : 'h-auto'
     )}>
         <div className={cn(
             "relative w-full aspect-video bg-black rounded-lg overflow-hidden shadow-2xl transition-all duration-300",
@@ -120,7 +124,7 @@ export function VslPlayer() {
         )}>
             <iframe
               ref={iframeRef}
-              src={`https://player.vimeo.com/video/${CONFIG.VIMEO_VIDEO_ID}?autoplay=1&muted=1&dnt=1&responsive=1`}
+              src={`https://player.vimeo.com/video/${CONFIG.VIMEO_VIDEO_ID}?dnt=1&responsive=1&pip=1`}
               width="100%"
               height="100%"
               frameBorder="0"
@@ -141,7 +145,7 @@ export function VslPlayer() {
               <div className={cn(
                   "vsl-cta-container absolute left-1/2 -translate-x-1/2 w-11/12 max-w-lg z-20 transition-all duration-500",
                   isCtaVisible ? 'bottom-5 sm:bottom-8 animate-fade-in-up' : '-bottom-full',
-                  isSticky && "hidden" // Esconde CTA no modo sticky
+                  isSticky && "hidden"
               )}>
                   <Button asChild size="lg" className="h-auto py-3 px-4 w-full text-sm sm:text-base font-headline bg-green-500 hover:bg-green-600 text-primary-foreground shadow-lg text-center transform hover:scale-105 transition-transform animate-pulse">
                       <Link href={CONFIG.CTA_HREF}>
