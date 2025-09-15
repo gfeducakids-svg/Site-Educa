@@ -38,6 +38,11 @@ export function VslPlayer() {
   useEffect(() => {
     if (typeof window === 'undefined' || !iframeRef.current) return;
 
+    // Evita reinicialização do player
+    if (playerRef.current) {
+        return;
+    }
+
     const player = new Player(iframeRef.current);
     playerRef.current = player;
     window.dataLayer = window.dataLayer || [];
@@ -79,13 +84,11 @@ export function VslPlayer() {
       player.setCurrentTime(savedTime).catch(e => console.warn("Não foi possível definir o tempo do vídeo."));
     }
     
-    // Tenta dar play no vídeo (geralmente só funciona se estiver mudo)
     player.play().catch(() => {
         console.log("Autoplay bloqueado pelo navegador, aguardando interação do usuário.");
         setShowUnmuteButton(true);
     });
-
-    // Garante que o vídeo comece mudo
+    
     player.setMuted(true);
 
     const observer = new IntersectionObserver(
@@ -100,6 +103,7 @@ export function VslPlayer() {
     return () => {
       player.destroy();
       if (wrapperRef.current) observer.unobserve(wrapperRef.current);
+      playerRef.current = null;
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -121,7 +125,7 @@ export function VslPlayer() {
     )}>
         <div className={cn(
             "relative w-full aspect-video bg-black rounded-lg overflow-hidden shadow-2xl transition-all duration-300",
-            isSticky && "fixed bottom-4 right-4 w-60 md:w-80 z-50 animate-fade-in"
+            isSticky && "fixed top-4 right-4 md:top-auto md:bottom-4 w-60 md:w-80 z-50 animate-fade-in"
         )}>
             <iframe
               ref={iframeRef}
