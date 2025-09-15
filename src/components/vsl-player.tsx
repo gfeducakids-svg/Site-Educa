@@ -38,6 +38,7 @@ export function VslPlayer() {
   useEffect(() => {
     if (typeof window === 'undefined' || !iframeRef.current) return;
 
+    // Re-inicializa o player do Vimeo para ter controle programático
     const player = new Player(iframeRef.current);
     playerRef.current = player;
     window.dataLayer = window.dataLayer || [];
@@ -46,6 +47,7 @@ export function VslPlayer() {
       window.dataLayer.push({ event: 'video_play' });
       player.getMuted().then(muted => {
           setIsMuted(muted);
+          // O botão de unmute só deve aparecer se o vídeo de fato estiver mudo
           setShowUnmuteButton(muted);
       });
     };
@@ -67,13 +69,15 @@ export function VslPlayer() {
     player.on('timeupdate', onTimeUpdate);
     player.on('ended', onEnded);
     player.on('pause', () => window.dataLayer.push({ event: 'video_pause' }));
+    
+    // Garante que o estado de mudo seja atualizado corretamente
     player.on('volumechange', (data: { volume: number }) => {
-      if (data.volume > 0) {
-        setIsMuted(false);
-        setShowUnmuteButton(false);
-      }
+        const muted = data.volume === 0;
+        setIsMuted(muted);
+        setShowUnmuteButton(muted);
     });
 
+    // Recupera o tempo salvo
     const savedTime = parseFloat(localStorage.getItem(`vimeoTime_${CONFIG.VIMEO_VIDEO_ID}`) || '0');
     if (savedTime > 0) {
       player.setCurrentTime(savedTime).catch(e => console.warn("Não foi possível definir o tempo do vídeo."));
@@ -97,10 +101,11 @@ export function VslPlayer() {
 
   const handleUnmute = () => {
     if (playerRef.current) {
-      playerRef.current.setMuted(false);
-      setIsMuted(false);
-      setShowUnmuteButton(false);
-      playerRef.current.play(); // Garante que o vídeo toque
+      playerRef.current.setMuted(false).then(() => {
+        setIsMuted(false);
+        setShowUnmuteButton(false);
+        playerRef.current?.play(); // Garante que o vídeo toque
+      }).catch(e => console.error("Erro ao desmutar o vídeo:", e));
     }
   };
 
@@ -115,7 +120,7 @@ export function VslPlayer() {
         )}>
             <iframe
               ref={iframeRef}
-              src={`https://player.vimeo.com/video/${CONFIG.VIMEO_VIDEO_ID}?autoplay=1&muted=1&background=1&dnt=1`}
+              src={`https://player.vimeo.com/video/${CONFIG.VIMEO_VIDEO_ID}?autoplay=1&muted=1&dnt=1&responsive=1`}
               width="100%"
               height="100%"
               frameBorder="0"
@@ -125,8 +130,8 @@ export function VslPlayer() {
             ></iframe>
             
             {showUnmuteButton && (
-                <div className="absolute inset-0 bg-black/30 flex items-center justify-center z-10">
-                    <Button onClick={handleUnmute} variant="secondary" size="lg" className="animate-pulse">
+                <div className="absolute inset-0 bg-black/30 flex items-center justify-center z-10 cursor-pointer" onClick={handleUnmute}>
+                    <Button variant="secondary" size="lg" className="animate-pulse pointer-events-none">
                         <VolumeX className="mr-2 h-6 w-6"/> ATIVAR SOM
                     </Button>
                 </div>
