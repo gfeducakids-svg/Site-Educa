@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Check, Crown, XCircle, Star } from "lucide-react";
+import { Check, Crown, XCircle, Star, Sparkles } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -74,9 +74,6 @@ export function Pricing() {
             </div>
             <CardHeader className="text-center pb-4 z-10 pt-8">
               <CardTitle className="text-3xl font-headline text-amber-900">PLANO PREMIUM</CardTitle>
-              <CardDescription className="text-4xl font-bold text-amber-600 tracking-tighter">R$ 47,90</CardDescription>
-              <p className="text-sm text-amber-800">Pagamento Único</p>
-              <p className="text-sm font-semibold text-green-600 mt-1">Apenas R$ 0,13 por dia</p>
             </CardHeader>
             <CardContent className="flex-grow z-10">
               <ul className="space-y-3 text-left">
@@ -92,7 +89,15 @@ export function Pricing() {
                 ))}
               </ul>
             </CardContent>
-            <div className="mt-6 z-10">
+            <div className="mt-6 z-10 px-6 pb-6 flex flex-col items-center text-center">
+                 <div className="mb-4">
+                    <p className="text-xl font-semibold text-green-600 flex items-center justify-center gap-2">
+                        <Sparkles className="w-5 h-5" />
+                        <span>Apenas R$ 1,60 por dia</span>
+                    </p>
+                    <p className="text-3xl font-bold text-amber-600 tracking-tighter mt-1">R$ 47,90</p>
+                    <p className="text-sm text-amber-800">Pagamento Único</p>
+                </div>
                  <Button asChild size="lg" className="w-full h-auto py-4 text-lg font-headline bg-green-500 hover:bg-green-600 text-white shadow-xl transform hover:scale-105 transition-transform">
                 <Link href="https://pay.kiwify.com.br/S7SLFJY">
                   GARANTIR MINHA VAGA
