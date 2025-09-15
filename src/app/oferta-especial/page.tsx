@@ -87,7 +87,7 @@ export default function OfertaEspecialPage() {
                         </p>
                         <p className="text-sm text-muted-foreground mt-2">(Pagamento Único)</p>
                     </div>
-                    <Button asChild size="lg" className="w-full h-auto py-4 text-lg font-headline bg-green-500 hover:bg-green-600 text-white shadow-xl transform hover:scale-105 transition-transform !whitespace-normal text-center">
+                    <Button asChild size="lg" className="w-full h-auto py-3 text-base sm:text-lg font-headline bg-green-500 hover:bg-green-600 text-white shadow-xl transform hover:scale-105 transition-transform !whitespace-normal text-center">
                     <Link href="https://pay.kiwify.com.br/S7SLFJY">
                     COMEÇAR A TRANSFORMAÇÃO AGORA
                     </Link>
