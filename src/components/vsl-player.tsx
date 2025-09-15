@@ -101,7 +101,8 @@ export function VslPlayer() {
       player.destroy();
       if (wrapperRef.current) observer.unobserve(wrapperRef.current);
     };
-  }, [isCtaVisible]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleUnmute = () => {
     if (playerRef.current) {
