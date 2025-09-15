@@ -19,7 +19,7 @@ import { Pricing } from "@/components/landing/pricing";
 import { WhyPrice } from "@/components/landing/why-price";
 
 export default function Home() {
-  const [vacancies, setVacancies] = useState(25);
+  const [vacancies, setVacancies] = useState(40);
 
   const decreaseVacancy = () => {
     setVacancies((prev) => (prev > 1 ? prev - 1 : 1));
