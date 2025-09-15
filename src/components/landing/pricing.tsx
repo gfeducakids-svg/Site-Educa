@@ -6,6 +6,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 const bonuses = [
+  { text: "Diversão sem tela, conexão real" },
+  { text: "Aprendizado sem lágrimas" },
+  { text: "Segurança total para ensinar" },
   { text: "Atividades para Imprimir" },
   { text: "Jogos Educativos Interativos" },
   { text: "Materiais Integrados de Apoio para Pais" },
@@ -15,9 +18,6 @@ const bonuses = [
   { text: "Certificado de Conclusão Personalizado" },
   { text: "Acesso Vitalício ao Conteúdo" },
   { text: "Atividades lúdicas e interativas" },
-  { text: "Diversão sem tela, conexão real" },
-  { text: "Aprendizado sem lágrimas" },
-  { text: "Segurança total para ensinar" },
   { text: "BÔNUS: Guia Completo para Alfabetização" },
   { text: "BÔNUS: Garantia de 7 Dias" },
 ];
