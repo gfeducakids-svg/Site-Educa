@@ -89,7 +89,7 @@ export default function OfertaEspecialPage() {
                     </div>
                     <Button asChild size="lg" className="w-full h-auto py-4 text-lg font-headline bg-green-500 hover:bg-green-600 text-white shadow-xl transform hover:scale-105 transition-transform">
                     <Link href="https://pay.kiwify.com.br/S7SLFJY">
-                    GARANTIR MINHA VAGA AGORA
+                    COMEÇAR A TRANSFORMAÇÃO AGORA
                     </Link>
                 </Button>
                 </div>
