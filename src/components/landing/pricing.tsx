@@ -95,13 +95,13 @@ export function Pricing() {
             <div className="mt-6 z-10 px-6 pb-6 flex flex-col items-center text-center">
               <div className="mb-6 bg-white/50 rounded-lg p-4 w-full max-w-sm mx-auto shadow-inner">
                 <p className="text-base text-gray-500 line-through">
-                  💰 VALOR NORMAL: R$ 149,90
+                  VALOR NORMAL: R$ 149,90
                 </p>
                 <p className="text-2xl font-bold text-green-600 my-1 animate-pulse">
-                  💥 SEU PREÇO HOJE: R$ 47,90
+                  SEU PREÇO HOJE: R$ 47,90
                 </p>
                 <p className="text-base font-semibold text-amber-800">
-                  💎 ECONOMIA: R$ 102,00
+                  ECONOMIA: R$ 102,00
                 </p>
                 <p className="text-sm text-muted-foreground mt-2">(Pagamento Único)</p>
               </div>
