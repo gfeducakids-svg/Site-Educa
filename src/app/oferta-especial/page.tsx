@@ -75,7 +75,7 @@ export default function OfertaEspecialPage() {
                 </ul>
                 </CardContent>
                 <div className="mt-6 z-10 px-6 pb-6 flex flex-col items-center text-center">
-                    <div className="mb-6 bg-white/50 rounded-lg p-4 w-full max-w-sm mx-auto shadow-inner">
+                    <div className="mb-6 p-4 w-full max-w-sm mx-auto">
                         <p className="text-base text-gray-500 line-through">
                         VALOR NORMAL: R$ 149,90
                         </p>
