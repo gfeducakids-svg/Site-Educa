@@ -58,6 +58,7 @@ export default function OfertaEspecialPage() {
                 <CardTitle className="text-3xl font-headline text-amber-900">PLANO PREMIUM</CardTitle>
                 <CardDescription className="text-4xl font-bold text-amber-600 tracking-tighter">R$ 47,90</CardDescription>
                 <p className="text-sm text-amber-800">Pagamento Único</p>
+                <p className="text-sm font-semibold text-green-600 mt-1">Apenas R$ 0,13 por dia</p>
                 </CardHeader>
                 <CardContent className="flex-grow z-10">
                 <ul className="space-y-3 text-left">
