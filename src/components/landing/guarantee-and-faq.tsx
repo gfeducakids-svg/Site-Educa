@@ -44,12 +44,13 @@ export function GuaranteeAndFaq() {
             <Card className="bg-background border-primary border-2 shadow-lg">
                 <CardHeader className="text-center">
                     <ShieldCheck className="h-12 w-12 mx-auto text-primary" />
-                    <CardTitle className="font-headline text-2xl text-primary">GARANTIA DE 7 DIAS</CardTitle>
+                    <CardTitle className="font-headline text-2xl text-primary">GARANTIA BLINDADA DE 7 DIAS</CardTitle>
                 </CardHeader>
-                <CardContent className="text-center">
+                <CardContent className="text-center space-y-4">
                     <p className="text-muted-foreground md:text-lg">
-                        Nós acreditamos tanto na qualidade do nosso produto/serviço que oferecemos uma garantia incondicional de 7 dias. Se você não ficar satisfeito, devolvemos 100% do seu dinheiro.
+                        Nós acreditamos tanto na eficácia do Método Chinês que oferecemos uma garantia INCONDICIONAL de 7 dias. Não funcionou? Não gostou? Mudou de ideia? Devolvemos 100% do seu dinheiro sem perguntas.
                     </p>
+                    <p className="font-bold text-foreground">O risco é todo nosso. Você só tem a ganhar.</p>
                 </CardContent>
             </Card>
 
