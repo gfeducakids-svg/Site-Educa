@@ -6,20 +6,20 @@ import Link from "next/link";
 import Image from "next/image";
 
 const bonuses = [
-  { text: "Diversão sem tela, conexão real" },
-  { text: "Aprendizado sem lágrimas" },
-  { text: "Segurança total para ensinar" },
-  { text: "Atividades para Imprimir" },
-  { text: "Jogos Educativos Interativos" },
-  { text: "Materiais Integrados de Apoio para Pais" },
-  { text: "Materiais ideias para Alfabetização" },
-  { text: "Suporte Pedagógico Automático 24/7" },
-  { text: "Suporte Sobre o APP Automático 24/7" },
-  { text: "Certificado de Conclusão Personalizado" },
-  { text: "Acesso Vitalício ao Conteúdo" },
-  { text: "Atividades lúdicas e interativas" },
-  { text: "BÔNUS: Guia Completo para Alfabetização" },
-  { text: "BÔNUS: Garantia de 7 Dias" },
+    { text: "Diversão sem tela, conexão real" },
+    { text: "Aprendizado sem lágrimas" },
+    { text: "Segurança total para ensinar" },
+    { text: "Atividades para Imprimir" },
+    { text: "Jogos Educativos Interativos" },
+    { text: "Materiais Integrados de Apoio para Pais" },
+    { text: "Materiais ideias para Alfabetização" },
+    { text: "Suporte Pedagógico Automático 24/7" },
+    { text: "Suporte Sobre o APP Automático 24/7" },
+    { text: "Certificado de Conclusão Personalizado" },
+    { text: "Acesso Vitalício ao Conteúdo" },
+    { text: "Atividades lúdicas e interativas" },
+    { text: "BÔNUS: Guia Completo para Alfabetização" },
+    { text: "BÔNUS: Garantia de 7 Dias" },
 ];
 
 const negatives = [
