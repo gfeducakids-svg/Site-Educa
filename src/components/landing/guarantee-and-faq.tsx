@@ -44,7 +44,7 @@ export function GuaranteeAndFaq() {
             <Card className="bg-background border-primary border-2 shadow-lg">
                 <CardHeader className="text-center">
                     <ShieldCheck className="h-12 w-12 mx-auto text-primary" />
-                    <CardTitle className="font-headline text-2xl text-primary">GARANTIA BLINDADA DE 7 DIAS</CardTitle>
+                    <CardTitle className="font-headline text-2xl text-primary">GARANTIA DE 7 DIAS</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center space-y-4">
                     <p className="text-muted-foreground md:text-lg">
