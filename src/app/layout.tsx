@@ -24,6 +24,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="preconnect" href="https://i.imgur.com" />
         <link rel="preconnect" href="https://pay.kiwify.com.br" />
+        <link rel="preconnect" href="https://player.vimeo.com" />
+        <link rel="preconnect" href="https://f.vimeocdn.com" />
         <link rel="dns-prefetch" href="https://cdn.utmify.com.br" />
 
         {/* Preload Fonts */}
