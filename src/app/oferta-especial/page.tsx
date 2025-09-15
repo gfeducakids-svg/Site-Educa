@@ -49,6 +49,21 @@ export default function OfertaEspecialPage() {
                 </div>
             </div>
 
+            <div className="max-w-2xl mx-auto bg-destructive/10 border-2 border-destructive/30 rounded-xl shadow-lg p-6 md:p-8 mb-8">
+                <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                    <div className="flex flex-col items-center gap-3 sm:gap-4">
+                        <AlertTriangle className="h-8 w-8 sm:h-10 sm:w-10 text-destructive flex-shrink-0 animate-pulse" />
+                        <h2 className="text-lg sm:text-xl font-bold tracking-tighter font-headline text-destructive">
+                             ATENÇÃO ESPECIAL:
+                        </h2>
+                    </div>
+                    <p className="max-w-[600px] text-destructive/80 text-base md:text-lg font-medium">
+                        Esta página será removida em breve. Bookmark este link pode não funcionar amanhã.
+                        Esta é literalmente sua ÚLTIMA OPORTUNIDADE de garantir este preço.
+                    </p>
+                </div>
+            </div>
+
             <Card className="relative flex flex-col p-6 bg-gradient-to-br from-yellow-50 via-amber-100 to-yellow-50 border-4 border-amber-400 shadow-2xl rounded-2xl transition-transform hover:scale-105 w-full max-w-lg">
                 <div className="absolute -top-4 right-1/2 translate-x-1/2 bg-amber-400 text-white font-bold px-4 py-2 rounded-md text-sm shadow-lg text-center">PARABÉNS! Você escolheu o método que funciona</div>
                 <div className="absolute top-2 left-2 opacity-20">
