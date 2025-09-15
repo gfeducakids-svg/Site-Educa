@@ -25,7 +25,7 @@ declare global {
 }
 
 export function VslPlayer() {
-  const playerContainerRef = useRef<HTMLDivElement>(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
   const playerRef = useRef<Player | null>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
@@ -36,26 +36,18 @@ export function VslPlayer() {
   const [isSticky, setIsSticky] = useState(false);
   
   useEffect(() => {
-    if (typeof window === 'undefined' || !playerContainerRef.current) return;
+    if (typeof window === 'undefined' || !iframeRef.current) return;
 
-    const player = new Player(playerContainerRef.current, {
-      id: parseInt(CONFIG.VIMEO_VIDEO_ID, 10),
-      byline: false,
-      portrait: false,
-      title: false,
-      autoplay: true,
-      muted: true,
-      dnt: true,
-      background: true, // Remove todos os controles
-    });
-
+    const player = new Player(iframeRef.current);
     playerRef.current = player;
     window.dataLayer = window.dataLayer || [];
 
     const onPlay = () => {
       window.dataLayer.push({ event: 'video_play' });
-      // Tenta remover o mudo após o play, mas pode ser bloqueado
-      player.getMuted().then(muted => setIsMuted(muted));
+      player.getMuted().then(muted => {
+          setIsMuted(muted);
+          setShowUnmuteButton(muted);
+      });
     };
 
     const onTimeUpdate = (data: { seconds: number }) => {
@@ -76,7 +68,10 @@ export function VslPlayer() {
     player.on('ended', onEnded);
     player.on('pause', () => window.dataLayer.push({ event: 'video_pause' }));
     player.on('volumechange', (data: { volume: number }) => {
-      if (data.volume > 0) setIsMuted(false);
+      if (data.volume > 0) {
+        setIsMuted(false);
+        setShowUnmuteButton(false);
+      }
     });
 
     const savedTime = parseFloat(localStorage.getItem(`vimeoTime_${CONFIG.VIMEO_VIDEO_ID}`) || '0');
@@ -118,7 +113,16 @@ export function VslPlayer() {
             "relative w-full aspect-video bg-black rounded-lg overflow-hidden shadow-2xl transition-all duration-300",
             isSticky && "fixed bottom-4 right-4 w-60 md:w-80 z-50 animate-fade-in"
         )}>
-            <div ref={playerContainerRef} className="w-full h-full" />
+            <iframe
+              ref={iframeRef}
+              src={`https://player.vimeo.com/video/${CONFIG.VIMEO_VIDEO_ID}?autoplay=1&muted=1&background=1&dnt=1`}
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              className="absolute top-0 left-0 w-full h-full"
+              title="VSL Player"
+            ></iframe>
             
             {showUnmuteButton && (
                 <div className="absolute inset-0 bg-black/30 flex items-center justify-center z-10">
