@@ -73,12 +73,12 @@ export default function OfertaEspecialPage() {
                 </CardContent>
                 <div className="mt-6 z-10 px-6 pb-6 flex flex-col items-center text-center">
                     <div className="mb-4">
-                        <p className="text-xl font-semibold text-green-600 flex items-center justify-center gap-2">
+                        <p className="text-3xl font-bold text-amber-600 tracking-tighter">R$ 47,90</p>
+                        <p className="text-lg font-semibold text-green-600 flex items-center justify-center gap-2 mt-1">
                            <Sparkles className="w-5 h-5" />
                            <span>Apenas R$ 1,60 por dia</span>
                         </p>
-                        <p className="text-3xl font-bold text-amber-600 tracking-tighter mt-1">R$ 47,90</p>
-                        <p className="text-sm text-amber-800">Pagamento Único</p>
+                        <p className="text-sm text-muted-foreground mt-1">Pagamento Único</p>
                     </div>
                     <Button asChild size="lg" className="w-full h-auto py-4 text-lg font-headline bg-green-500 hover:bg-green-600 text-white shadow-xl transform hover:scale-105 transition-transform">
                     <Link href="https://pay.kiwify.com.br/S7SLFJY">
