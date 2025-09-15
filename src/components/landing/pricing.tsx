@@ -96,7 +96,7 @@ export function Pricing() {
                         <Sparkles className="w-5 h-5" />
                         <span>Apenas R$ 1,60 por dia</span>
                     </p>
-                    <p className="text-sm text-muted-foreground mt-1">[Pagamento Único]</p>
+                    <p className="text-sm text-muted-foreground mt-1">(Pagamento Único)</p>
                 </div>
                  <Button asChild size="lg" className="w-full h-auto py-4 text-lg font-headline bg-green-500 hover:bg-green-600 text-white shadow-xl transform hover:scale-105 transition-transform">
                 <Link href="https://pay.kiwify.com.br/S7SLFJY">
