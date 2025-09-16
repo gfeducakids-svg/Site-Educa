@@ -17,7 +17,7 @@ const faqs = [
   {
     icon: Users,
     question: "NÃO FUNCIONA PARA MIM",
-    answer: "Já funcionou com +1.200 famílias de diferentes perfis. Crianças de 4 a 8 anos, com e sem dificuldades. Garantia de 7 dias para testar."
+    answer: "Mais de 1.200 crianças já estão lendo fluentemente - algumas em apenas 21 dias. Crianças de 4 a 8 anos, com e sem dificuldades."
   },
   {
     icon: Check,
