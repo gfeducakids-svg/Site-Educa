@@ -26,6 +26,9 @@ export function Urgency() {
                 <p className="max-w-[600px] text-muted-foreground text-base md:text-lg">
                     Após as 500 vagas se esgotarem, o preço retornará ao valor original de <span className="font-bold text-destructive">R$ 149,90</span>. Garanta sua vaga pelo preço promocional agora!
                 </p>
+                <p className="max-w-[600px] text-muted-foreground text-base md:text-lg mt-2 font-semibold">
+                    Esta página será removida em breve. Se você sair agora e tentar voltar amanhã, pode ser que não encontre mais este preço especial!
+                </p>
             </div>
         </div>
 
@@ -70,3 +73,4 @@ export function Urgency() {
     </section>
   );
 }
+
