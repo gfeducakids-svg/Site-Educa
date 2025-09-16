@@ -6,7 +6,7 @@ import { ShieldCheck, Mail, Clock, Wallet, Check, BrainCircuit, Users, Laptop } 
 const faqs = [
   {
     icon: Clock,
-    question: "NÃO TENHO TEMPO",
+    question: "MAS EU TRABALHO O DIA TODO!",
     answer: "Apenas 15 minutos por dia. Menos tempo que você gasta vendo TV ou no celular. E os resultados aparecem em 30 dias."
   },
   {
