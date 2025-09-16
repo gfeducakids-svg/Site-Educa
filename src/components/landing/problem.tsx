@@ -28,7 +28,7 @@ export function Problem() {
           </div>
           <div className="space-y-4 rounded-lg bg-background p-8 shadow-lg border-2 border-accent">
             <p className="text-muted-foreground md:text-lg">
-              A verdade é que <strong className="text-foreground">não é culpa sua.</strong> O problema não está em você - está no método ultrapassado que ainda é utilizado para alfabetizar.
+              A verdade é que <strong className="text-foreground">não é culpa sua.</strong> O problema não está em você! Está no método ultrapassado que ainda é utilizado para alfabetizar.
             </p>
             <div className="flex items-center gap-3 pt-4">
                 <Lightbulb className="h-8 w-8 text-primary"/>
