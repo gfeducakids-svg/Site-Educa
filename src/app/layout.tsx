@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        <link rel="icon" href="https://i.imgur.com/DEZmyj9.png" />
+        <link rel="icon" href="https://i.imgur.com/NW3rP0y.png" />
         
         {/* Preconnect and DNS Prefetch */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,7 +34,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet" />
         
         {/* Preload Images */}
-        <link rel="preload" as="image" href="https://i.imgur.com/DEZmyj9.png" />
+        <link rel="preload" as="image" href="https://i.imgur.com/NW3rP0y.png" />
         <link rel="preload" as="image" href="https://i.imgur.com/UVJxHiG.png" />
         <link rel="preload" as="image" href="https://i.imgur.com/lj6ZGBc.jpeg" />
         <link rel="preload" as="image" href="https://i.imgur.com/cdL6AlF.jpeg" />
