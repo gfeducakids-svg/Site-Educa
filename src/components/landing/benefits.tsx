@@ -10,13 +10,6 @@ const benefits = [
   { icon: Wallet, title: "ADEUS A REFORÇOS CAROS", description: "Outros pais gastam R$ 2.400+ por ano em reforço. Você resolve de uma vez." },
 ];
 
-const highlights = [
-  { icon: Clock, text: "APENAS 15 MINUTOS POR DIA" },
-  { icon: Smile, text: "CONTEÚDO INTERATIVO" },
-  { icon: Sparkles, text: "SEM LÁGRIMAS OU PRESSÃO" },
-  { icon: ArrowRight, text: "RESULTADOS EM 30 DIAS" }
-]
-
 export function Benefits() {
   return (
     <section className="w-full py-8 md:py-12 lg:py-16 bg-white">
@@ -35,14 +28,6 @@ export function Benefits() {
                   <h3 className="text-lg font-bold font-headline text-foreground">{benefit.title}</h3>
                   <p className="text-muted-foreground">{benefit.description}</p>
                 </div>
-              </div>
-            ))}
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-4xl pt-8">
-            {highlights.map((highlight, index) => (
-              <div key={index} className="flex items-center justify-center gap-2 p-3 bg-background rounded-lg shadow-md">
-                <highlight.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
-                <span className="font-semibold text-xs sm:text-sm text-foreground text-center">{highlight.text}</span>
               </div>
             ))}
           </div>
