@@ -5,7 +5,7 @@ import { Toaster } from '@/components/ui/toaster';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'Alfabetiza Kids - Método Chinês para Alfabetização Rápida',
+  title: 'Educa Kids - Formula Chinesa da Leitura para Alfabetização Rápida',
   description: 'Descubra o Método Chinês que alfabetiza crianças 300% mais rápido, sem lágrimas ou pressão. +1.200 famílias aprovam. Garantia 7 dias. Apenas R$ 37,90.',
 };
 

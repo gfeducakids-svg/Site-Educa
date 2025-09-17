@@ -12,7 +12,8 @@ export function Hero() {
           <div className="flex flex-col justify-center space-y-6 text-center">
             <div className="space-y-4">
               <h1 className="text-2xl font-bold font-headline tracking-tighter sm:text-3xl md:text-4xl text-foreground">
-                DESCUBRA o Método Chinês em APP que alfabetiza crianças com apenas 15 minutos por dia!
+              Seu filho com a Fórmula Chinesa da Leitura pode aprender a ler em 30 dias com apenas 15 minutos por dia!
+            
               </h1>
               <p className="max-w-[600px] text-muted-foreground md:text-xl font-rubik mx-auto">
                 <span className="text-primary font-bold">3x Mais eficaz que métodos tradicionais</span> para mães que querem alfabetizar sem lágrimas ou pressão em apenas 30 dias.
