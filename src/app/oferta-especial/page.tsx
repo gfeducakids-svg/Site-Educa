@@ -57,7 +57,7 @@ export default function OfertaEspecialPage() {
                 </div>
             </div>
 
-            <Card className="relative flex flex-col p-6 bg-gradient-to-br from-yellow-50 via-amber-100 to-yellow-50 border-4 border-amber-400 shadow-2xl rounded-2xl transition-transform hover:scale-105 w-full max-w-4xl">
+            <Card className="relative flex flex-col p-6 bg-gradient-to-br from-yellow-50 via-amber-100 to-yellow-50 border-4 border-amber-400 shadow-2xl rounded-2xl transition-transform hover:scale-105 w-full max-w-5xl">
                 <div className="absolute -top-4 right-1/2 translate-x-1/2 bg-amber-400 text-white font-bold px-4 py-2 rounded-md text-sm shadow-lg text-center !whitespace-normal sm:!whitespace-nowrap">Tudo o que Você Precisa para Ensinar em Casa com Sucesso!</div>
                 <div className="absolute top-2 left-2 opacity-20">
                     <Star className="w-16 h-16 text-amber-300 fill-amber-300" />
@@ -93,7 +93,7 @@ export default function OfertaEspecialPage() {
                             </p>
                             <p className="text-sm text-primary">Apenas R$ 1,60 por dia</p>
                             <p className="text-sm font-semibold text-primary mt-4">
-                            Economize R$102,00 e resolva a alfabetização de forma leve, acessível e definitiva.
+                              Economize R$102,00 e resolva a alfabetização de forma leve, acessível e definitiva.
                             </p>
                             <p className="text-sm text-muted-foreground mt-2">(Pagamento Único)</p>
                         </div>

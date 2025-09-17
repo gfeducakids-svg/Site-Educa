@@ -36,7 +36,7 @@ export function Pricing() {
             Você tem duas opções. A decisão que você tomar hoje pode mudar a vida da sua criança para sempre.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-12 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-12 items-stretch">
           
           {/* Plano Grátis */}
           <Card className="flex flex-col justify-between p-4 bg-white shadow-md transition-transform hover:scale-105">
@@ -60,7 +60,7 @@ export function Pricing() {
           </Card>
 
           {/* Plano Premium */}
-          <Card className="relative flex flex-col p-6 bg-gradient-to-br from-yellow-50 via-amber-100 to-yellow-50 border-4 border-amber-400 shadow-2xl rounded-2xl transition-transform hover:scale-105 w-full max-w-4xl md:col-span-2">
+          <Card className="relative flex flex-col p-6 bg-gradient-to-br from-yellow-50 via-amber-100 to-yellow-50 border-4 border-amber-400 shadow-2xl rounded-2xl transition-transform hover:scale-105 w-full">
             <div className="absolute -top-4 right-1/2 translate-x-1/2 bg-amber-400 text-white font-bold px-4 py-2 rounded-md text-sm shadow-lg text-center !whitespace-normal sm:!whitespace-nowrap">Tudo o que Você Precisa para Ensinar em Casa com Sucesso!</div>
              <div className="absolute top-2 left-2 opacity-20">
                 <Star className="w-16 h-16 text-amber-300 fill-amber-300" />
