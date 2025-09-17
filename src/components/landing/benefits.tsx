@@ -6,7 +6,7 @@ const benefits = [
   { icon: BotMessageSquare, title: "MOMENTOS DE CONEXÃO EM VEZ DE LÁGRIMAS", description: "Transforme a hora da lição em momentos especiais de diversão e cumplicidade." },
   { icon: Home, title: "SEGURANÇA TOTAL PARA ENSINAR EM CASA", description: "Você terá um método passo-a-passo que funciona, mesmo sem ter experiência em educação." },
   { icon: Clock, title: "ECONOMIZE +8 HORAS POR SEMANA", description: "Apenas 15 minutos/dia substituem horas de lutas com os métodos tradicionais" },
-  { icon: Smile, title: "AUTOESTIMA E CONFIANÇA DA CRIANÇA", description: "Seu filho vai ser elogiado e se sentir capaz e inteligente ao invés de \"atrasado\" ou \"incapaz\"" },
+  { icon: Smile, title: "AUTOESTIMA E CONFIANÇA DA CRIANÇA", description: "Seu filho vai se sentir inteligente, capaz, e orgulhoso de si mesmo." },
   { icon: Wallet, title: "ADEUS A REFORÇOS CAROS", description: "Outros pais gastam R$ 2.400+ por ano em reforço. Você resolve de uma vez." },
 ];
 
