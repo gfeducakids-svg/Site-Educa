@@ -88,7 +88,7 @@ export default function OfertaEspecialPage() {
                         VALOR NORMAL: R$ 149,90
                         </p>
                         <p className="text-2xl font-bold text-green-600 my-1 animate-pulse">
-                        SEU PREÇO HOJE: R$ 47,90
+                        HOJE : R$ 47,90
                         </p>
                         <p className="text-base font-semibold text-amber-800">
                         Economize R$102,00 e resolva a alfabetização de forma leve, acessível e definitiva.
