@@ -91,7 +91,7 @@ export default function OfertaEspecialPage() {
                         SEU PREÇO HOJE: R$ 47,90
                         </p>
                         <p className="text-base font-semibold text-amber-800">
-                        ECONOMIA: R$ 102,00
+                        Economize R$102,00 e resolva a alfabetização de forma leve, acessível e definitiva.
                         </p>
                         <p className="text-sm text-muted-foreground mt-2">(Pagamento Único)</p>
                     </div>
