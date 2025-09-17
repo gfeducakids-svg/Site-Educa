@@ -91,7 +91,7 @@ export default function OfertaEspecialPage() {
                         HOJE : R$ 47,90
                         </p>
                         <p className="text-sm text-primary">Apenas R$ 1,60 por dia</p>
-                        <p className="text-base font-semibold text-amber-800 mt-4">
+                        <p className="text-sm font-semibold text-primary mt-4">
                         Economize R$102,00 e resolva a alfabetização de forma leve, acessível e definitiva.
                         </p>
                         <p className="text-sm text-muted-foreground mt-2">(Pagamento Único)</p>
