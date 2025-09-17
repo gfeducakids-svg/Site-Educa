@@ -16,20 +16,18 @@ export function Urgency() {
     <section className="w-full pt-0 pb-8 md:pb-12 lg:pb-16 bg-background">
       <div className="container px-4 md:px-6 space-y-8">
         <div className="max-w-2xl mx-auto bg-white border-2 border-destructive/20 rounded-xl shadow-lg p-6 md:p-8">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                <div className="flex flex-col items-center gap-3 sm:gap-4">
-                    <AlertTriangle className="h-8 w-8 sm:h-10 sm:w-10 text-destructive flex-shrink-0" />
-                    <h2 className="text-xl sm:text-2xl font-bold tracking-tighter font-headline text-foreground">
-                        ATENÇÃO: <br />OFERTA POR TEMPO LIMITADO
-                    </h2>
-                </div>
-                <p className="max-w-[600px] text-muted-foreground text-base md:text-lg">
-                    Após as 500 vagas se esgotarem, o preço retornará ao valor original de <span className="font-bold text-destructive">R$ 149,90</span>. Garanta sua vaga pelo preço promocional agora!
-                </p>
-                <p className="max-w-[600px] text-muted-foreground text-base md:text-lg mt-2 font-semibold">
-                    Esta página será removida em breve. Se você sair agora e tentar voltar amanhã, pode ser que não encontre mais este preço especial!
-                </p>
-            </div>
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <h2 className="text-xl sm:text-2xl font-bold tracking-tighter font-headline text-foreground flex items-center gap-2">
+              <AlertTriangle className="h-8 w-8 sm:h-10 sm:w-10 text-destructive flex-shrink-0" />
+              ATENÇÃO
+            </h2>
+            <p className="max-w-[600px] text-muted-foreground text-base md:text-lg">
+              Esta oferta é para as primeiras 500 mães que quiserem transformar a alfabetização dos seus filhos em casa. Depois disso, o acesso volta para <span className="font-bold text-destructive">R$ 149,90</span> ou pode sair do ar a qualquer momento.
+            </p>
+            <p className="max-w-[600px] text-muted-foreground text-base md:text-lg mt-2 font-semibold">
+              Se você sair desta página, pode não encontrar esse preço novamente.
+            </p>
+          </div>
         </div>
 
         <div className="flex flex-col items-center">
@@ -73,4 +71,3 @@ export function Urgency() {
     </section>
   );
 }
-
