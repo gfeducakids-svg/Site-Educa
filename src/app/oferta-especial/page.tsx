@@ -6,20 +6,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 const bonuses = [
-  { text: "Diversão sem tela, conexão real" },
-  { text: "Aprendizado sem lágrimas" },
-  { text: "Segurança total para ensinar" },
-  { text: "Atividades para Imprimir" },
-  { text: "Jogos Educativos Interativos" },
+  { text: "Acesso Vitalício ao Método Interativo" },
+  { text: "Atividades Imprimíveis e Jogos Educativos" },
   { text: "Materiais Integrados de Apoio para Pais" },
-  { text: "Materiais ideias para Alfabetização" },
-  { text: "Suporte Pedagógico Automático 24/7" },
-  { text: "Suporte Sobre o APP Automático 24/7" },
-  { text: "Certificado de Conclusão Personalizado" },
-  { text: "Acesso Vitalício ao Conteúdo" },
-  { text: "Atividades lúdicas e interativas" },
-  { text: "BÔNUS: Guia Completo para Alfabetização" },
-  { text: "BÔNUS: Garantia de 7 Dias" },
+  { text: "Suporte 24h para dúvidas pedagógicas e do APP" },
+  { text: "Certificado Personalizado de Conclusão" },
+  { text: "BÔNUS: Guia Completo da Alfabetização Divertida" },
+  { text: "BÔNUS: Garantia Incondicional de 7 Dias" },
 ];
 
 
