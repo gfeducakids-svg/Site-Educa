@@ -58,7 +58,7 @@ export default function OfertaEspecialPage() {
             </div>
 
             <div className="flex flex-col w-full max-w-6xl">
-                <div className="mb-2 bg-amber-400 text-white font-bold px-4 py-2 rounded-md text-sm shadow-lg text-center">
+                <div className="bg-amber-400 text-white font-bold px-4 py-2 rounded-md text-sm shadow-lg text-center mb-2">
                     Tudo o que Você Precisa para Ensinar em Casa com Sucesso!
                 </div>
                 <Card className="relative flex flex-col p-6 bg-gradient-to-br from-yellow-50 via-amber-100 to-yellow-50 border-4 border-amber-400 shadow-2xl rounded-2xl transition-transform hover:scale-105 w-full flex-grow">
