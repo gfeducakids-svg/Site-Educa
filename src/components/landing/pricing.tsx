@@ -36,7 +36,7 @@ export function Pricing() {
             Você tem duas opções. A decisão que você tomar hoje pode mudar a vida da sua criança para sempre.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-12 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mt-12 items-stretch">
           
           {/* Plano Grátis */}
           <Card className="flex flex-col justify-between p-4 bg-white shadow-md transition-transform hover:scale-105">
