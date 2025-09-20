@@ -60,8 +60,8 @@ export function Pricing() {
           </Card>
 
           {/* Plano Premium */}
-          <div className="flex flex-col">
-            <div className="bg-amber-400 text-white font-bold px-4 py-2 rounded-md text-sm shadow-lg text-center mb-2">
+          <div className="flex flex-col w-full max-w-6xl items-center">
+            <div className="bg-amber-400 text-white font-bold px-4 py-2 rounded-md text-sm shadow-lg text-center mb-2 mt-8">
                 Tudo o que Você Precisa para Ensinar em Casa com Sucesso!
             </div>
             <Card className="relative flex flex-col p-6 bg-gradient-to-br from-yellow-50 via-amber-100 to-yellow-50 border-4 border-amber-400 shadow-2xl rounded-2xl transition-transform hover:scale-105 w-full flex-grow">
@@ -104,7 +104,7 @@ export function Pricing() {
                         <p className="text-sm text-muted-foreground mt-2">(Pagamento Único)</p>
                     </div>
                     <Button asChild size="lg" className="w-full h-auto py-3 text-base sm:text-lg font-headline bg-green-500 hover:bg-green-600 text-white shadow-xl transform hover:scale-105 transition-transform !whitespace-normal text-center">
-                        <Link href="https://pay.kiwify.com.br/S7SLFJY">
+                        <Link href="https://pay.kiwify.com.br/KCqJlXF">
                         COMEÇAR A TRANSFORMAÇÃO AGORA
                         </Link>
                     </Button>

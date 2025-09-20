@@ -41,7 +41,7 @@ export default function RootLayout({
         <link rel="preload" as="image" href="https://i.imgur.com/jCmtRJ1.jpeg" />
 
         {/* Prefetch Links */}
-        <link rel="prefetch" href="https://pay.kiwify.com.br/S7SLFJY" />
+        <link rel="prefetch" href="https://pay.kiwify.com.br/KCqJlXF" />
         <link rel="prefetch" href="/oferta-especial" />
         
         <Script

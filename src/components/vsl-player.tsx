@@ -12,7 +12,7 @@ import { Rocket, VolumeX, Volume2 } from 'lucide-react';
 const CONFIG = {
   VIMEO_VIDEO_ID: '1118869511', // O ID do seu vídeo do Vimeo
   CTA_SECONDS: 480, // Em qual segundo o botão de CTA deve aparecer
-  CTA_HREF: 'https://pay.kiwify.com.br/S7SLFJY', // Link de checkout
+  CTA_HREF: 'https://pay.kiwify.com.br/KCqJlXF', // Link de checkout
   CTA_LABEL: 'SIM QUERO O MÉTODO',
   END_SCREEN: true, // Ativar ou desativar a tela final
 };
