@@ -12,7 +12,7 @@ export function Hero() {
           <div className="flex flex-col justify-center space-y-6 text-center">
             <div className="space-y-4">
               <h1 className="text-2xl font-bold font-headline tracking-tighter sm:text-3xl md:text-4xl text-foreground">
-              Seu filho com a Fórmula Chinesa da Leitura pode aprender a ler em 30 dias com apenas 15 minutos por dia!
+              Com a Fórmula Chinesa da Leitura seu filho pode aprender a ler com apenas 15 minutos por dia!
             
               </h1>
               <p className="max-w-[600px] text-muted-foreground md:text-xl font-rubik mx-auto">
